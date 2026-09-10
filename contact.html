@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Sri Aathithya Infra Project - Aadithiya Group</title>
+  <meta name="description" content="Get in touch with Sri Aathithya Infra Project Pvt Ltd. Request a site visit or quote for road construction, EHT powerline shifting, and quarry aggregate supply.">
+  <link rel="icon" type="image/png" href="assets/logo/Logo.png">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .page-hero {
+      padding-top: calc(var(--header-height) + 4rem);
+      padding-bottom: 4rem;
+      background-color: var(--bg-subtle);
+      border-bottom: 1px solid var(--border-light);
+    }
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 5rem;
+      padding-top: 5rem;
+      padding-bottom: 6rem;
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      background: #FFFFFF;
+      padding: 2.5rem;
+      border: 1px solid var(--border-light);
+      border-radius: 4px;
+
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .form-label {
+      font-size: 0.8125rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #000000;
+    }
+    .form-input, .form-textarea, .form-select {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      border: 1px solid var(--border-light);
+      border-radius: 2px;
+      font-family: var(--font-text);
+      font-size: 0.95rem;
+      background-color: #FAFAFA;
+      transition: border-color var(--transition-fast), background-color var(--transition-fast);
+    }
+    .form-input:focus, .form-textarea:focus, .form-select:focus {
+      border-color: var(--primary);
+      background-color: #FFFFFF;
+      outline: none;
+    }
+    .info-card {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+    .info-block h4 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: #000000;
+    }
+    .info-block p {
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+    .legal-section {
+      background: var(--bg-subtle);
+      padding-top: 4rem;
+      padding-bottom: 5rem;
+      border-top: 1px solid var(--border-light);
+    }
+    .legal-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-light);
+      padding: 2.5rem;
+      margin-bottom: 2rem;
+      border-radius: 4px;
+    }
+    @media (max-width: 868px) {
+      .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="site-container header-inner">
+      <a href="index.html" class="brand-wrapper">
+        <img src="assets/logo/Logo.png" alt="Aadithiya Group Logo" class="brand-logo-img">
+        <div class="brand-info">
+          <span class="brand-name">AADITHIYA <span>GROUP</span></span>
+          <span class="brand-subtitle">Sri Aathithya Infra</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="about-us.html" class="nav-link">About Us</a></li>
+          <li><a href="careers.html" class="nav-link">Careers</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="tel:+919500777777" class="btn-call">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+          </svg>
+          Call Now!
+        </a>
+        <button class="hamburger-btn" aria-label="Toggle navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="services.html" class="mobile-nav-link">Services</a></li>
+      <li><a href="projects.html" class="mobile-nav-link">Projects</a></li>
+      <li><a href="about-us.html" class="mobile-nav-link">About Us</a></li>
+      <li><a href="careers.html" class="mobile-nav-link">Careers</a></li>
+      <li><a href="contact.html" class="mobile-nav-link active">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="site-container">
+      <span class="section-tagline">Get In Touch</span>
+      <h1 class="section-title accent">Request a Site Visit or Quotation</h1>
+      <p class="section-desc" style="max-width: 760px;">
+        Tell us about your infrastructure project — road construction, EHT transmission shifting, or quarry aggregate requirements — and our planning team will respond within one business day.
+      </p>
+    </div>
+  </div>
+
+  <!-- CONTACT CONTENT -->
+  <main class="site-container contact-layout">
+    <!-- Form -->
+    <div>
+      <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you! Your enquiry has been received. Our planning team will reach out within 24 hours.');">
+        <h3 class="section-title" style="font-size: 1.5rem; margin-bottom: 0.5rem;">Send Project Enquiry</h3>
+        <p class="section-desc" style="margin-bottom: 1.5rem; font-size: 0.9rem;">Fill out the specifications below for tenders, subcontracting, or direct material supply.</p>
+
+        <div class="form-group">
+          <label class="form-label">Full Name *</label>
+          <input type="text" class="form-input" required placeholder="Your Name">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Phone Number *</label>
+          <input type="tel" class="form-input" required placeholder="+91 98765 43210">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Email Address *</label>
+          <input type="email" class="form-input" required placeholder="you@organisation.com">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Organisation / Department</label>
+          <input type="text" class="form-input" placeholder="e.g. NHAI / PWD / Contractor Name">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Service Discipline</label>
+          <select class="form-select">
+            <option>State NH / DRDA Road Construction</option>
+            <option>NHAI / MoRTH Road Maintenance</option>
+            <option>EHT / HT Transmission Line Shifting</option>
+            <option>Quarry M-Sand & Aggregates Supply</option>
+            <option>Road Safety Furniture & Crash Barriers</option>
+            <option>Utility & Pipeline Relocation</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Project Details / Scope</label>
+          <textarea class="form-textarea" rows="4" placeholder="Briefly describe project location, chainage, BOQ volume or deadline requirements..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-pill btn-primary" style="margin-top: 0.5rem;">Send Enquiry</button>
+      </form>
+    </div>
+
+    <!-- Contact Info Blocks -->
+    <div class="info-card">
+      <div class="info-block">
+        <span class="section-tagline">Registered Office</span>
+        <h4>Head Office Address</h4>
+        <p>
+          Sri Aathithya Infra Project Private Limited<br>
+          Flat No. 620/61A4, Sathyanagar,<br>
+          Chettinaickenpatti, Dindigul,<br>
+          Tamil Nadu – 624004, India.
+        </p>
+      </div>
+
+      <div class="info-block">
+        <span class="section-tagline">Direct Contact</span>
+        <h4>Telephone & Email</h4>
+        <p>
+          <strong>Hotline:</strong> <a href="tel:+919500777777" style="color: var(--primary); font-weight: 600;">+91 95007 77777</a><br>
+          <strong>Planning Desk:</strong> +91 98431 53838<br>
+          <strong>Email:</strong> <a href="mailto:sriaathithyainfraprojectpvtltd@gmail.com" style="color: var(--primary); font-weight: 600;">sriaathithyainfraprojectpvtltd@gmail.com</a><br>
+          <strong>Business Hours:</strong> Monday – Saturday, 9:00 AM – 6:00 PM
+        </p>
+      </div>
+
+      <div class="info-block">
+        <span class="section-tagline">Regulatory Compliance</span>
+        <h4>Statutory Registrations</h4>
+        <p>
+          <strong>GSTIN:</strong> 33ABNCS2699J1ZO<br>
+          <strong>Incorporation:</strong> Operating Since 2018<br>
+          <strong>Audited Status:</strong> Compliant under Indian Companies Act
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- LEGAL & POLICIES -->
+  <section class="legal-section">
+    <div class="site-container">
+      <div class="legal-card" id="terms">
+        <h3 class="section-title" style="font-size: 1.35rem;">Terms & Conditions</h3>
+        <p class="section-desc" style="font-size: 0.9rem;">
+          All quotations, contracts, and aggregate supply orders issued by Sri Aathithya Infra Project Private Limited are governed by our master service agreements, approved bill of quantities, and respective tender agreements conforming to IRC / MoRTH guidelines.
+        </p>
+      </div>
+
+      <div class="legal-card" id="accessibility">
+        <h3 class="section-title" style="font-size: 1.35rem;">Accessibility Statement</h3>
+        <p class="section-desc" style="font-size: 0.9rem;">
+          Aadithiya Group is dedicated to ensuring digital accessibility for all users, including individuals with disabilities. We continually refine our user interface in conformance with WCAG 2.1 AA accessibility guidelines.
+        </p>
+      </div>
+
+      <div class="legal-card" id="privacy">
+        <h3 class="section-title" style="font-size: 1.35rem;">Privacy Policy</h3>
+        <p class="section-desc" style="font-size: 0.9rem;">
+          Information submitted via our enquiry forms is exclusively used to respond to project requirements and prepare technical bids. We never share, sell, or disclose client contact information to third parties.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="site-container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+                    <a href="index.html" class="footer-brand-logo-wrap">
+            <div class="footer-logo-badge">
+              <img src="assets/logo/Logo.png" alt="Sri Aathithya Infra Logo" class="footer-logo-img">
+            </div>
+          </a>
+          <p class="footer-text">
+            Design engineering, highway construction, and contracting solutions across Tamil Nadu.
+          </p>
+          <a href="contact.html" class="btn-pill btn-footer">Contact Us</a>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Head Office</h4>
+          <p class="footer-text">
+            Flat No. 620/61A4, Sathyanagar,<br>
+            Chettinaickenpatti, Dindigul,<br>
+            Tamil Nadu – 624004
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Inquiries</h4>
+          <p class="footer-text">
+            <strong>Phone:</strong> <a href="tel:+919500777777" style="color: #FFF; text-decoration: underline;">+91 95007 77777</a><br>
+            <strong>Email:</strong> <a href="mailto:sriaathithyainfraprojectpvtltd@gmail.com" style="color: #FFF; text-decoration: underline;">sriaathithyainfraprojectpvtltd@gmail.com</a>
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Menu</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Group Companies</h4>
+          <ul class="footer-links-list">
+            <li><a href="services.html#quarry-crushing">Sri Aathithya Blue Metals</a></li>
+            <li><a href="about-us.html">Kannan Contractor</a></li>
+            <li><a href="services.html#quarry-crushing">Aathithya Blue Metals</a></li>
+            <li><a href="services.html#quarry-crushing">Sri Aathithya Sands</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom-bar">
+        <div class="footer-legal-links">
+          <a href="#terms">Terms & Conditions</a>
+          <a href="#accessibility">Accessibility Statement</a>
+          <a href="#privacy">Privacy Policy</a>
+        </div>
+        <div>
+          GSTIN: 33ABNCS2699J1ZO • &copy; 2026 Sri Aathithya Infra Project Private Limited. All rights reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

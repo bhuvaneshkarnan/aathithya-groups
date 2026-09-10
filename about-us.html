@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Sri Aathithya Infra Project - Aadithiya Group</title>
+  <meta name="description" content="About Sri Aathithya Infra Project Pvt Ltd: Vision, mission, values, 17 categories of owned machineries, 5-year turnover growth, and sister concerns.">
+  <link rel="icon" type="image/png" href="assets/logo/Logo.png">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .page-hero {
+      padding-top: calc(var(--header-height) + 4rem);
+      padding-bottom: 4rem;
+      background-color: var(--bg-subtle);
+      border-bottom: 1px solid var(--border-light);
+    }
+    .about-story-section {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 4.5rem;
+      align-items: center;
+    }
+    .turnover-section {
+      background-color: var(--bg-subtle);
+      padding-top: 5rem;
+      padding-bottom: 5.5rem;
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+    }
+    .turnover-bars {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 1.5rem;
+      margin-top: 3rem;
+      align-items: flex-end;
+      height: 320px;
+      padding-bottom: 2rem;
+      border-bottom: 2px solid var(--border-light);
+    }
+    .bar-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+      justify-content: flex-end;
+    }
+    .bar-pill {
+      width: 100%;
+      max-width: 90px;
+      background-color: var(--primary);
+      border-radius: 6px 6px 0 0;
+      transition: height 1s ease;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding-top: 0.5rem;
+      color: #FFF;
+      font-weight: 700;
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+    }
+    .bar-label {
+      margin-top: 0.75rem;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-align: center;
+    }
+    .fleet-table-container {
+      margin-top: 3rem;
+      border: 1px solid var(--border-light);
+      background: #FFFFFF;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+    .fleet-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+    .fleet-table th {
+      background-color: #FAFAFA;
+      padding: 1rem 1.5rem;
+      font-family: var(--font-display);
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #000000;
+      border-bottom: 1px solid var(--border-light);
+    }
+    .fleet-table td {
+      padding: 1rem 1.5rem;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--border-light);
+    }
+    .fleet-table tr:last-child td {
+      border-bottom: none;
+    }
+    .sister-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .sister-card {
+      border: 1px solid var(--border-light);
+      padding: 2.25rem;
+      background: #FFFFFF;
+      border-radius: 4px;
+      position: relative;
+    }
+    .sister-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--primary);
+    }
+    .sister-name {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: #000000;
+    }
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+      margin-top: 3.5rem;
+    }
+    .team-card {
+      border: 1px solid var(--border-light);
+      padding: 2.25rem;
+      background: #FFFFFF;
+      border-radius: 4px;
+      text-align: center;
+    }
+    .team-card img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 1.5rem;
+      border: 3px solid var(--primary);
+    }
+    .team-name {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+    .team-role {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+    .team-contact {
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+    @media (max-width: 992px) {
+      .about-story-section {
+        grid-template-columns: 1fr;
+      }
+      .turnover-bars {
+        grid-template-columns: repeat(3, 1fr);
+        height: auto;
+      }
+      .sister-grid, .team-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="site-container header-inner">
+      <a href="index.html" class="brand-wrapper">
+        <img src="assets/logo/Logo.png" alt="Aadithiya Group Logo" class="brand-logo-img">
+        <div class="brand-info">
+          <span class="brand-name">AADITHIYA <span>GROUP</span></span>
+          <span class="brand-subtitle">Sri Aathithya Infra</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="about-us.html" class="nav-link active">About Us</a></li>
+          <li><a href="careers.html" class="nav-link">Careers</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="tel:+919500777777" class="btn-call">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+          </svg>
+          Call Now!
+        </a>
+        <button class="hamburger-btn" aria-label="Toggle navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="services.html" class="mobile-nav-link">Services</a></li>
+      <li><a href="projects.html" class="mobile-nav-link">Projects</a></li>
+      <li><a href="about-us.html" class="mobile-nav-link active">About Us</a></li>
+      <li><a href="careers.html" class="mobile-nav-link">Careers</a></li>
+      <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="site-container">
+      <span class="section-tagline">Sri Aathithya Infra Project Pvt Ltd</span>
+      <h1 class="section-title accent">About Our Company</h1>
+      <p class="section-desc" style="max-width: 780px;">
+        A dynamic, professionally managed infrastructure company delivering design engineering, highway construction, transmission lines, and aggregate quarry solutions across Tamil Nadu since 2018.
+      </p>
+    </div>
+  </div>
+
+  <!-- VISION & MISSION -->
+  <section class="site-container about-story-section">
+    <div>
+      <span class="section-tagline">Vision & Mission</span>
+      <h2 class="section-title">Nation-Building with Global Standards</h2>
+      <p class="section-desc" style="margin-bottom: 1.25rem;">
+        Sri Aathithya Infra Project Private Limited aims to contribute to nation-building by executing infrastructure projects with the highest standards of quality, value, and integrity. The company is committed to deploying world-class equipment that ensures optimum fuel efficiency, enhanced productivity, and environmental sustainability.
+      </p>
+      <p class="section-desc" style="margin-bottom: 2rem;">
+        We adopt global best practices in project execution, with a strong focus on commitment, safety, and quality. By fostering a positive and performance-driven work environment, we empower our employees to deliver excellence.
+      </p>
+
+      <span class="section-tagline" style="margin-top: 1.5rem;">Core Values</span>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+        <div style="border-left: 3px solid var(--primary); padding-left: 1rem;">
+          <h4 style="font-weight: 700; margin-bottom: 0.2rem;">01 Safety</h4>
+          <p style="font-size: 0.875rem; color: var(--text-muted);">Safety in all site operations</p>
+        </div>
+        <div style="border-left: 3px solid var(--primary); padding-left: 1rem;">
+          <h4 style="font-weight: 700; margin-bottom: 0.2rem;">02 Transparency</h4>
+          <p style="font-size: 0.875rem; color: var(--text-muted);">Transparency in business practices</p>
+        </div>
+        <div style="border-left: 3px solid var(--primary); padding-left: 1rem;">
+          <h4 style="font-weight: 700; margin-bottom: 0.2rem;">03 Reliability</h4>
+          <p style="font-size: 0.875rem; color: var(--text-muted);">Reliability in execution & delivery</p>
+        </div>
+        <div style="border-left: 3px solid var(--primary); padding-left: 1rem;">
+          <h4 style="font-weight: 700; margin-bottom: 0.2rem;">04 Mutual Respect</h4>
+          <p style="font-size: 0.875rem; color: var(--text-muted);">Mutual respect in all client relationships</p>
+        </div>
+        <div style="border-left: 3px solid var(--primary); padding-left: 1rem; grid-column: 1 / -1;">
+          <h4 style="font-weight: 700; margin-bottom: 0.2rem;">05 Regulatory Adherence</h4>
+          <p style="font-size: 0.875rem; color: var(--text-muted);">Strict adherence to statutory laws, IRC, and environmental regulations</p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <img src="assets/images/about-bg.jpg" alt="Aadithiya Group Heavy Construction Fleet" style="border-radius: 4px;">
+    </div>
+  </section>
+
+  <!-- TURNOVER RECORD -->
+  <section class="turnover-section">
+    <div class="site-container">
+      <span class="section-tagline">Our Growth Record</span>
+      <h2 class="section-title">Audited Compounding Turnover</h2>
+      <p class="section-desc" style="max-width: 700px;">
+        Audited annual revenue from FY 2020–21 through the ongoing FY 2025–26 — reflecting strong execution capability and institutional client trust.
+      </p>
+
+      <div class="turnover-bars">
+        <div class="bar-col">
+          <div class="bar-pill" style="height: 35px;">₹ 47L</div>
+          <div class="bar-label">2020–21<br>₹ 47,00,000</div>
+        </div>
+        <div class="bar-col">
+          <div class="bar-pill" style="height: 48px;">₹ 59L</div>
+          <div class="bar-label">2021–22<br>₹ 59,00,000</div>
+        </div>
+        <div class="bar-col">
+          <div class="bar-pill" style="height: 75px;">₹ 1.33Cr</div>
+          <div class="bar-label">2022–23<br>₹ 1,33,00,000</div>
+        </div>
+        <div class="bar-col">
+          <div class="bar-pill" style="height: 140px;">₹ 8.57Cr</div>
+          <div class="bar-label">2023–24<br>₹ 8,57,00,000</div>
+        </div>
+        <div class="bar-col">
+          <div class="bar-pill" style="height: 220px;">₹ 17.86Cr</div>
+          <div class="bar-label">2024–25<br>₹ 17,86,00,000</div>
+        </div>
+        <div class="bar-col">
+          <div class="bar-pill" style="height: 300px; background-color: var(--primary);">₹ 41.29Cr</div>
+          <div class="bar-label">2025–26 (Ongoing)<br>₹ 41,29,00,000</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIST OF MACHINERIES & EQUIPMENTS -->
+  <section class="site-container" style="padding-top: 5.5rem; padding-bottom: 5.5rem;">
+    <span class="section-tagline">17-Category Wholly Owned Fleet</span>
+    <h2 class="section-title">List of Machineries & Equipments</h2>
+    <p class="section-desc" style="max-width: 760px;">
+      Every contract is executed with our wholly owned equipment — eliminating plant rental dependencies and ensuring complete control over project timelines.
+    </p>
+
+    <div class="fleet-table-container">
+      <table class="fleet-table">
+        <thead>
+          <tr>
+            <th style="width: 80px;">S.No</th>
+            <th>Item Description</th>
+            <th style="width: 180px; text-align: right;">Quantity / Capacity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td><strong>SANY / KOBELCO Excavator 220</strong></td><td style="text-align: right;">6 Units</td></tr>
+          <tr><td>2</td><td><strong>JCB 3DX / Mobile Crane</strong></td><td style="text-align: right;">6 Units</td></tr>
+          <tr><td>3</td><td><strong>Heavy Tippers</strong></td><td style="text-align: right;">32 Units</td></tr>
+          <tr><td>4</td><td><strong>Water Tankers</strong></td><td style="text-align: right;">5 Units</td></tr>
+          <tr><td>5</td><td><strong>Roller (Compactor)</strong></td><td style="text-align: right;">3 Units</td></tr>
+          <tr><td>6</td><td><strong>Isuzu Camper (Field Supervision)</strong></td><td style="text-align: right;">5 Units</td></tr>
+          <tr><td>7</td><td><strong>Service Van (Mobile Mechanic Unit)</strong></td><td style="text-align: right;">2 Units</td></tr>
+          <tr><td>8</td><td><strong>Crusher Plant (3-Stage Cone System)</strong></td><td style="text-align: right;">350 TPH</td></tr>
+          <tr><td>9</td><td><strong>Sand Wash Plant (Dual Cyclonic)</strong></td><td style="text-align: right;">300 TPH</td></tr>
+          <tr><td>10</td><td><strong>Heavy Rock Dumpers</strong></td><td style="text-align: right;">15 Units</td></tr>
+          <tr><td>11</td><td><strong>Captive Stone Quarry</strong></td><td style="text-align: right;">75 Acres</td></tr>
+          <tr><td>12</td><td><strong>Motor Grader</strong></td><td style="text-align: right;">2 Units</td></tr>
+          <tr><td>13</td><td><strong>Wheel Loader</strong></td><td style="text-align: right;">3 Units</td></tr>
+          <tr><td>14</td><td><strong>Transit Mixer</strong></td><td style="text-align: right;">3 Units</td></tr>
+          <tr><td>15</td><td><strong>Mechanical Broomer</strong></td><td style="text-align: right;">3 Units</td></tr>
+          <tr><td>16</td><td><strong>Tandem Roller</strong></td><td style="text-align: right;">3 Units</td></tr>
+          <tr><td>17</td><td><strong>Sensor Paver Finisher</strong></td><td style="text-align: right;">2 Units</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- SISTER CONCERNS / GROUP COMPANIES -->
+  <section style="background-color: var(--bg-subtle); padding-top: 5rem; padding-bottom: 5.5rem; border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light);">
+    <div class="site-container">
+      <span class="section-tagline">Aadithiya Group Ecosystem</span>
+      <h2 class="section-title">Our Sister Concerns</h2>
+      <p class="section-desc">Four specialized companies operating under unified leadership.</p>
+
+      <div class="sister-grid">
+        <div class="sister-card">
+          <h3 class="sister-name">M/s Sri Aathithya Blue Metals</h3>
+          <p class="section-desc" style="font-size: 0.95rem;">
+            District pioneers in aggregate production, operating a cutting-edge 350 TPH crusher plant and an exclusive 300 TPH sand wash plant supplying high-grade materials across the region.
+          </p>
+        </div>
+
+        <div class="sister-card">
+          <h3 class="sister-name">M/s Kannan Contractor</h3>
+          <p class="section-desc" style="font-size: 0.95rem;">
+            Initiated construction operations in the year 2018. Built on disciplined execution and lean manpower, creating major infrastructure contracting opportunities across South India.
+          </p>
+        </div>
+
+        <div class="sister-card">
+          <h3 class="sister-name">M/s Aathithya Blue Metals</h3>
+          <p class="section-desc" style="font-size: 0.95rem;">
+            Leading regional suppliers of all types of crushed aggregates for building construction, NHAI, MoRTH, State Highways, DRDA, rural roads, and local building supplies.
+          </p>
+        </div>
+
+        <div class="sister-card">
+          <h3 class="sister-name">M/s Sri Aathithya Sands</h3>
+          <p class="section-desc" style="font-size: 0.95rem;">
+            District leaders in the high-volume manufacture and delivery of certified Manufactured Sand (M-Sand) and Plastering Sand (P-Sand) for all civil and structural works.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEADERSHIP TEAM -->
+  <section class="site-container" style="padding-top: 5.5rem; padding-bottom: 6rem;">
+    <span class="section-tagline">Leadership & Key Personnel</span>
+    <h2 class="section-title">Speak Directly to Our Management</h2>
+    <p class="section-desc">Direct technical and commercial contact information.</p>
+
+    <div class="team-grid">
+      <div class="team-card">
+        <img src="assets/images/kannan.jpeg" alt="S. Kannan">
+        <h3 class="team-name">S. Kannan</h3>
+        <div class="team-role">Managing Director</div>
+        <div class="team-contact"><a href="tel:+919500777777" style="color: inherit;">+91 95007 77777</a></div>
+      </div>
+      <div class="team-card">
+        <img src="assets/images/about-badge.png" alt="N. Praveen Kumar">
+        <h3 class="team-name">N. Praveen Kumar</h3>
+        <div class="team-role">Planning & Execution</div>
+        <div class="team-contact"><a href="tel:+919843153838" style="color: inherit;">+91 98431 53838</a></div>
+      </div>
+      <div class="team-card">
+        <img src="assets/images/about-badge.png" alt="M. Shiv Kumar">
+        <h3 class="team-name">M. Shiv Kumar</h3>
+        <div class="team-role">Project Manager</div>
+        <div class="team-contact"><a href="tel:+918639177990" style="color: inherit;">+91 86391 77990</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="site-container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+                    <a href="index.html" class="footer-brand-logo-wrap">
+            <div class="footer-logo-badge">
+              <img src="assets/logo/Logo.png" alt="Sri Aathithya Infra Logo" class="footer-logo-img">
+            </div>
+          </a>
+          <p class="footer-text">
+            Design engineering, highway construction, and contracting solutions across Tamil Nadu.
+          </p>
+          <a href="contact.html" class="btn-pill btn-footer">Contact Us</a>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Head Office</h4>
+          <p class="footer-text">
+            Flat No. 620/61A4, Sathyanagar,<br>
+            Chettinaickenpatti, Dindigul,<br>
+            Tamil Nadu – 624004
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Inquiries</h4>
+          <p class="footer-text">
+            <strong>Phone:</strong> <a href="tel:+919500777777" style="color: #FFF; text-decoration: underline;">+91 95007 77777</a><br>
+            <strong>Email:</strong> <a href="mailto:sriaathithyainfraprojectpvtltd@gmail.com" style="color: #FFF; text-decoration: underline;">sriaathithyainfraprojectpvtltd@gmail.com</a>
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Menu</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Sister Concerns</h4>
+          <ul class="footer-links-list">
+            <li><a href="services.html#mining">Sri Aathithya Blue Metals</a></li>
+            <li><a href="about-us.html">Kannan Contractor</a></li>
+            <li><a href="services.html#mining">Aathithya Blue Metals</a></li>
+            <li><a href="services.html#mining">Sri Aathithya Sands</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom-bar">
+        <div class="footer-legal-links">
+          <a href="contact.html#terms">Terms & Conditions</a>
+          <a href="contact.html#accessibility">Accessibility Statement</a>
+          <a href="contact.html#privacy">Privacy Policy</a>
+        </div>
+        <div>
+          GSTIN: 33ABNCS2699J1ZO • &copy; 2026 Sri Aathithya Infra Project Private Limited. All rights reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

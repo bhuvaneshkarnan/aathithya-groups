@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Sri Aathithya Infra Project - Aadithiya Group</title>
+  <meta name="description" content="Explore verified ongoing and completed infrastructure projects of Sri Aathithya Infra Project Pvt Ltd across Tamil Nadu.">
+  <link rel="icon" type="image/png" href="assets/logo/Logo.png">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .page-hero {
+      padding-top: calc(var(--header-height) + 4rem);
+      padding-bottom: 4rem;
+      background-color: var(--bg-subtle);
+      border-bottom: 1px solid var(--border-light);
+    }
+    .filter-bar {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+    .filter-btn {
+      padding: 0.5rem 1.25rem;
+      border-radius: 9999px;
+      border: 1px solid var(--border-light);
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background-color: #FFFFFF;
+      transition: all var(--transition-fast);
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background-color: #000000;
+      color: #FFFFFF;
+      border-color: #000000;
+    }
+    .projects-full-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+      padding-top: 4.5rem;
+      padding-bottom: 6rem;
+    }
+    .portfolio-item {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid var(--border-light);
+      border-radius: 4px;
+      overflow: hidden;
+      background-color: #FFFFFF;
+      transition: transform var(--transition-normal);
+    }
+    .portfolio-item:hover {
+      transform: translateY(-4px);
+
+    }
+    .portfolio-thumb {
+      width: 100%;
+      height: 220px;
+      overflow: hidden;
+      background-color: #ECECEC;
+    }
+    .portfolio-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--transition-smooth);
+    }
+    .portfolio-item:hover .portfolio-thumb img {
+      transform: scale(1.05);
+    }
+    .portfolio-body {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: space-between;
+    }
+    .portfolio-tag {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.4rem;
+    }
+    .portfolio-title {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 700;
+      line-height: 1.35;
+      margin-bottom: 0.5rem;
+      color: #000000;
+    }
+    .portfolio-client {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+    .portfolio-value-badge {
+      font-family: var(--font-mono);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--primary);
+      padding-top: 0.85rem;
+      border-top: 1px solid var(--border-light);
+    }
+    .status-pill {
+      display: inline-block;
+      padding: 0.2rem 0.6rem;
+      border-radius: 9999px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-left: 0.5rem;
+    }
+    .status-ongoing {
+      background: #FFF0E6;
+      color: var(--primary);
+    }
+    .status-completed {
+      background: #E6F7ED;
+      color: #0F8A4B;
+    }
+    @media (max-width: 992px) {
+      .projects-full-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 640px) {
+      .projects-full-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="site-container header-inner">
+      <a href="index.html" class="brand-wrapper">
+        <img src="assets/logo/Logo.png" alt="Aadithiya Group Logo" class="brand-logo-img">
+        <div class="brand-info">
+          <span class="brand-name">AADITHIYA <span>GROUP</span></span>
+          <span class="brand-subtitle">Sri Aathithya Infra</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="projects.html" class="nav-link active">Projects</a></li>
+          <li><a href="about-us.html" class="nav-link">About Us</a></li>
+          <li><a href="careers.html" class="nav-link">Careers</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="tel:+919500777777" class="btn-call">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+          </svg>
+          Call Now!
+        </a>
+        <button class="hamburger-btn" aria-label="Toggle navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="services.html" class="mobile-nav-link">Services</a></li>
+      <li><a href="projects.html" class="mobile-nav-link active">Projects</a></li>
+      <li><a href="about-us.html" class="mobile-nav-link">About Us</a></li>
+      <li><a href="careers.html" class="mobile-nav-link">Careers</a></li>
+      <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="site-container">
+      <span class="section-tagline">Sri Aathithya Infra Project Pvt Ltd</span>
+      <h1 class="section-title accent">Our Project Portfolio</h1>
+      <p class="section-desc" style="max-width: 780px;">
+        Audited track record of 11 on-going contracts and prestigious completed infrastructure developments across national and state highways.
+      </p>
+
+      <!-- Filter Controls -->
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All Projects (17)</button>
+        <button class="filter-btn" data-filter="ongoing">On-Going Contracts (11)</button>
+        <button class="filter-btn" data-filter="completed">Completed Projects (6)</button>
+        <button class="filter-btn" data-filter="eht">EHT & Utility Shifting</button>
+        <button class="filter-btn" data-filter="highways">Highways & Earthworks</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECTS GRID -->
+  <main class="site-container">
+    <div class="projects-full-grid" id="portfolioGrid">
+
+      <!-- ON-GOING 1 -->
+      <div class="portfolio-item" data-category="ongoing eht">
+        <div class="portfolio-thumb">
+          <img src="assets/images/project-2-viaduct.jpg" alt="EHT line NH83 ROW" loading="lazy">
+        </div>
+        <div class="portfolio-body">
+          <div>
+            <div class="portfolio-tag">Power Corridors <span class="status-pill status-ongoing">On-Going</span></div>
+            <h3 class="portfolio-title">Utility Shifting Works EHT Line Along NH83 ROW</h3>
+            <p class="portfolio-client">NHAI – PIU Dindigul (Various Locations along ROW)</p>
+          </div>
+          <div class="portfolio-value-badge">₹ 2,587 Lakhs</div>
+        </div>
+      </div>
+
+      <!-- ON-GOING 2 -->
+      <div class="portfolio-item" data-category="ongoing highways">
+        <div class="portfolio-thumb">
+          <img src="assets/images/project-3-skyscraper.jpg" alt="Embankment Earthworks NH-716B" loading="lazy">
+        </div>
+        <div class="portfolio-body">
+          <div>
+            <div class="portfolio-tag">Highway Earthworks <span class="status-pill status-ongoing">On-Going</span></div>
+            <h3 class="portfolio-title">Construction of Embankment Bed [Earth Works] NH-716B–IV</h3>
+            <p class="portfolio-client">National Highway Corridor, South Tamil Nadu</p>
+          </div>
+          <div class="portfolio-value-badge">₹ 1,983 Lakhs</div>
+        </div>
+      </div>
+
+      <!-- ON-GOING 3 -->
+      <div class="portfolio-item" data-category="ongoing eht">
+        <div class="portfolio-thumb">
+          <img src="assets/images/HT Line Shifting.jpg" alt="EHT & HT/LT Package I" loading="lazy">
+        </div>
+        <div class="portfolio-body">
+          <div>
+            <div class="portfolio-tag">Transmission Towers <span class="status-pill status-ongoing">On-Going</span></div>
+            <h3 class="portfolio-title">Utility Shifting Works EHT and HT/LT Package – I</h3>
+            <p class="portfolio-client">High-Voltage Transmission Network, Tamil Nadu</p>
+          </div>
+          <div class="portfolio-value-badge">₹ 571 Lakhs</div>
+        </div>
+      </div>
+
+      <!-- ON-GOING 4 -->
+      <div class="portfolio-item" data-category="ongoing highways">
+        <div class="portfolio-thumb">
+          <img src="assets/images/project-4-railway.jpg" alt="Crash Barriers & Signage" loading="lazy">
+        </div>
+        <div class="portfolio-body">
+          <div>
+            <div class="portfolio-tag">Safety Furniture <span class="status-pill status-ongoing">On-Going</span></div>
+            <h3 class="portfolio-title">Short-Term Rectification: Metal Beam Crash Barrier & Signage</h3>
+            <p class="portfolio-client">Solar Blinkers, Impact Attenuators, Thermoplastic Marking</p>
+          </div>
+          <div class="portfolio-value-badge">₹ 412 Lakhs</div>
+        </div>
+      </div>
+
+      <!-- ON-GOING 5 -->
+      <div class="portfolio-item" data-category="ongoing highways">
+        <div class="portfolio-thumb">
+          <img src="assets/images/road construction.jpg" alt="PMGSY M.Edayapatti Road" loading="lazy">
+        </div>
+        <div class="portfolio-body">
+          <div>
+            <div class="portfolio-tag">PMGSY Rural Road <span class="status-pill status-ongoing">On-Going</span></div>
+            <h3 class="portfolio-title">Strengthening of Road MRL-02 M.Edayapatti to Thethur</h3>
+            <p class="portfolio-client">Km 0/0-5/380, Tiruchirappalli Dt (PMGSY Batch-I-2024-25, 5-Yr Pkg)</p>
+          </div>
+          <div class="portfolio-value-badge">₹ 364 Lakhs</div>
+        </div>
+      </div>
+
+      <!-- ON-GOING 6 -->
+      <div class="portfolio-item" data-category="ongoing highways">
+        <div class="portfolio-thumb">
+          <img src="assets/images/feature-1-commercial.jpg" alt="NH-44 NH-209 Accident Spots" loading="lazy">
+        </div>
+        <div class="portfolio-body">
+          <div>
+            <div class="portfolio-tag">Blackspot Correction <span class="status-pill status-ongoing">On-Going</span></div>
+            <h3 class="portfolio-title">Hotspots / Accident Spots Rectification Works</h3>
+            <p class="portfolio-client">NH-44, NH-209 (New No. 83) and NH-38 (Old NH-45B)</p>
+          </div>
+          <div class="portfolio-value-badge">₹ 295 Lakhs</div>
+        </div>
+      </div>
+
+      <!-- ON-GOING 7 -->
+      <div class="portfolio-item" data-category="ongoing highways">
+        <div class="portfolio-thumb">
+          <img src="assets/images/feature-2-infra.jpg" alt="NH-36 Annual Maintenance" loading="lazy">
+        </div>
+        <div class="portfolio-body">
+          <div>
+            <div class="portfolio-tag">Annual Maintenance <span class="status-pill status-ongoing">On-Going</span></div>
+            <h3 class="portfolio-title">Annual Maintenance & Incident Management NH-36</h3>
+            <p class="portfolio-client">Thanjavur to Pudukkottai (Km 174+000 to Km 229+228)</p>
+          </div>
+          <div class="portfolio-value-badge">₹ 290 Lakhs</div>
+        </div>
+      </div>
+
+      <!-- ON-GOING 8 -->
+      <div class="portfolio-item" data-category="ongoing eht">
+        <div class="portfolio-thumb">
+          <img src="assets/images/utility.jpg" alt="NH-45C HAM Utility Shifting" loading="lazy">
+        </div>
+        <div class="portfolio-body">
+          <div>
+            <div class="portfolio-tag">Hybrid Annuity Mode <span class="status-pill status-ongoing">On-Going</span></div>
+            <h3 class="portfolio-title">Utility Shifting Works EHT & HT/LT NH-45C NHDP Phase-IV</h3>
+            <p class="portfolio-client">MoRTH HAM Package Corridor</p>
+          </div>
+          <div class="portfolio-value-badge">₹ 150 Lakhs</div>
+        </div>
+      </div>
+
+      <!-- ON-GOING 9 -->
+      <div class="portfolio-item" data-category="ongoing highways">
+        <div class="portfolio-thumb">
+          <img src="assets/images/project-1-interchange.jpg" alt="Sevugampatti Toll Plaza" loading="lazy">
+        </div>
+        <div class="portfolio-body">
+          <div>
+            <div class="portfolio-tag">Toll & ETC <span class="status-pill status-ongoing">On-Going</span></div>
+            <h3 class="portfolio-title">Re-establishment of Sevugampatti Toll Plaza at Km 27+900</h3>
+            <p class="portfolio-client">NH-183 Dindigul to Theni Section with System Integration</p>
+          </div>
+          <div class="portfolio-value-badge">₹ 79 Lakhs</div>
+        </div>
+      </div>
+
+      <!-- ON-GOING 10 -->
+      <div class="portfolio-item" data-category="ongoing">
+        <div class="portfolio-thumb">
+          <img src="assets/images/feature-3-res-large.jpg" alt="DRDA School Building SIDS" loading="lazy">
+        </div>
+        <div class="portfolio-body">
+          <div>
+            <div class="portfolio-tag">Public Infrastructure <span class="status-pill status-ongoing">On-Going</span></div>
+            <h3 class="portfolio-title">School Building Construction (SIDS Scheme)</h3>
+            <p class="portfolio-client">DRDA School Infrastructure Development Scheme</p>
+          </div>
+          <div class="portfolio-value-badge">₹ 66 Lakhs</div>
+        </div>
+      </div>
+
+      <!-- ON-GOING 11 -->
+      <div class="portfolio-item" data-category="ongoing highways">
+        <div class="portfolio-thumb">
+          <img src="assets/images/road construction.jpg" alt="Short Term Rectification" loading="lazy">
+        </div>
+        <div class="portfolio-body">
+          <div>
+            <div class="portfolio-tag">Highway Furniture <span class="status-pill status-ongoing">On-Going</span></div>
+            <h3 class="portfolio-title">Short-Term Rectification Measures (Rate Basis)</h3>
+            <p class="portfolio-client">Crash Barriers, Road Studs, Speed Tables & Marking</p>
+          </div>
+          <div class="portfolio-value-badge">₹ 412 Lakhs</div>
+        </div>
+      </div>
+
+      <!-- COMPLETED 1 -->
+      <div class="portfolio-item" data-category="completed">
+        <div class="portfolio-thumb">
+          <img src="assets/images/quarry operation 1.jpg" alt="Crushed Aggregates Supply" loading="lazy">
+        </div>
+        <div class="portfolio-body">
+          <div>
+            <div class="portfolio-tag">Crushed Aggregates <span class="status-pill status-completed">Completed</span></div>
+            <h3 class="portfolio-title">Supply of 15 Lakhs Cu.M Crushed Aggregates</h3>
+            <p class="portfolio-client">Delivered within 16-month contract duration</p>
+          </div>
+          <div class="portfolio-value-badge">₹ 447 Lakhs</div>
+        </div>
+      </div>
+
+      <!-- COMPLETED 2 -->
+      <div class="portfolio-item" data-category="completed highways">
+        <div class="portfolio-thumb">
+          <img src="assets/images/about-bg.jpg" alt="Annual Maintenance NH-45B" loading="lazy">
+        </div>
+        <div class="portfolio-body">
+          <div>
+            <div class="portfolio-tag">Corridor Maintenance <span class="status-pill status-completed">Completed</span></div>
+            <h3 class="portfolio-title">Annual Maintenance of NH–45B Dindigul – Theni – Kumuli</h3>
+            <p class="portfolio-client">Full Route Asset Management & Routine Maintenance</p>
+          </div>
+          <div class="portfolio-value-badge">₹ 640 Lakhs</div>
+        </div>
+      </div>
+
+      <!-- COMPLETED 3 -->
+      <div class="portfolio-item" data-category="completed highways">
+        <div class="portfolio-thumb">
+          <img src="assets/images/project-1-interchange.jpg" alt="Accident Spots NH-44" loading="lazy">
+        </div>
+        <div class="portfolio-body">
+          <div>
+            <div class="portfolio-tag">Blackspot Mitigation <span class="status-pill status-completed">Completed</span></div>
+            <h3 class="portfolio-title">Accident Spots Rectification in NH-44 & NH-209</h3>
+            <p class="portfolio-client">Civil Realignment and High-Impact Barricades</p>
+          </div>
+          <div class="portfolio-value-badge">₹ 215 Lakhs</div>
+        </div>
+      </div>
+
+      <!-- COMPLETED 4 -->
+      <div class="portfolio-item" data-category="completed highways">
+        <div class="portfolio-thumb">
+          <img src="assets/images/road construction.jpg" alt="Rural Roads NNT Mode" loading="lazy">
+        </div>
+        <div class="portfolio-body">
+          <div>
+            <div class="portfolio-tag">Rural Connectivity <span class="status-pill status-completed">Completed</span></div>
+            <h3 class="portfolio-title">Rural Road Works in Namakku Naame Thittam [NNT] Mode</h3>
+            <p class="portfolio-client">Successfully completed ahead of scheduled timeline</p>
+          </div>
+          <div class="portfolio-value-badge">₹ 163 Lakhs</div>
+        </div>
+      </div>
+
+      <!-- COMPLETED 5 -->
+      <div class="portfolio-item" data-category="completed">
+        <div class="portfolio-thumb">
+          <img src="assets/images/feature-3-res-large.jpg" alt="DRDA School Building" loading="lazy">
+        </div>
+        <div class="portfolio-body">
+          <div>
+            <div class="portfolio-tag">Public Works <span class="status-pill status-completed">Completed</span></div>
+            <h3 class="portfolio-title">School Building Construction for DRDA</h3>
+            <p class="portfolio-client">District Rural Development Agency [DRDA]</p>
+          </div>
+          <div class="portfolio-value-badge">₹ 130 Lakhs</div>
+        </div>
+      </div>
+
+      <!-- COMPLETED 6 -->
+      <div class="portfolio-item" data-category="completed highways">
+        <div class="portfolio-thumb">
+          <img src="assets/images/feature-1-commercial.jpg" alt="DRN Infra Earthwork" loading="lazy">
+        </div>
+        <div class="portfolio-body">
+          <div>
+            <div class="portfolio-tag">Mass Earthworks <span class="status-pill status-completed">Completed</span></div>
+            <h3 class="portfolio-title">Earthwork of 3 Lakhs Cu.M (BC/Wet Slurry Removal)</h3>
+            <p class="portfolio-client">Site disposal to 3 km lead for M/s DRN Infra Projects</p>
+          </div>
+          <div class="portfolio-value-badge">₹ 39 Lakhs</div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="site-container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+                    <a href="index.html" class="footer-brand-logo-wrap">
+            <div class="footer-logo-badge">
+              <img src="assets/logo/Logo.png" alt="Sri Aathithya Infra Logo" class="footer-logo-img">
+            </div>
+          </a>
+          <p class="footer-text">
+            Design engineering, highway construction, and contracting solutions across Tamil Nadu.
+          </p>
+          <a href="contact.html" class="btn-pill btn-footer">Contact Us</a>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Head Office</h4>
+          <p class="footer-text">
+            Flat No. 620/61A4, Sathyanagar,<br>
+            Chettinaickenpatti, Dindigul,<br>
+            Tamil Nadu – 624004
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Inquiries</h4>
+          <p class="footer-text">
+            <strong>Phone:</strong> <a href="tel:+919500777777" style="color: #FFF; text-decoration: underline;">+91 95007 77777</a><br>
+            <strong>Email:</strong> <a href="mailto:sriaathithyainfraprojectpvtltd@gmail.com" style="color: #FFF; text-decoration: underline;">sriaathithyainfraprojectpvtltd@gmail.com</a>
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Menu</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Sister Concerns</h4>
+          <ul class="footer-links-list">
+            <li><a href="services.html#mining">Sri Aathithya Blue Metals</a></li>
+            <li><a href="about-us.html">Kannan Contractor</a></li>
+            <li><a href="services.html#mining">Aathithya Blue Metals</a></li>
+            <li><a href="services.html#mining">Sri Aathithya Sands</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom-bar">
+        <div class="footer-legal-links">
+          <a href="contact.html#terms">Terms & Conditions</a>
+          <a href="contact.html#accessibility">Accessibility Statement</a>
+          <a href="contact.html#privacy">Privacy Policy</a>
+        </div>
+        <div>
+          GSTIN: 33ABNCS2699J1ZO • &copy; 2026 Sri Aathithya Infra Project Private Limited. All rights reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.getAttribute('data-filter');
+        document.querySelectorAll('.portfolio-item').forEach(item => {
+          const cats = item.getAttribute('data-category').split(' ');
+          if (filter === 'all' || cats.includes(filter)) {
+            item.style.display = 'flex';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

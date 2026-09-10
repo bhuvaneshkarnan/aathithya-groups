@@ -1,0 +1,16 @@
+# OS files
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Temporary / test files
+test*.png
+test*.html
+test*.txt
+shot_*.png
+screenshot*.png
+*.log
+
+# Raw zip archives & download folders
+*.zip
+drive-download-*

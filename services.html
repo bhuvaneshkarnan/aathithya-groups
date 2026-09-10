@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Sri Aathithya Infra Project - Aadithiya Group</title>
+  <meta name="description" content="Explore our complete engineering services: Highways construction, railways works, state highways, mining of minerals, fuel pump approach roads with PESO license, EHT line shifting, bulk carriers, and CSR.">
+  <link rel="icon" type="image/png" href="assets/logo/Logo.png">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .page-hero {
+      padding-top: calc(var(--header-height) + 4rem);
+      padding-bottom: 4rem;
+      background-color: var(--bg-subtle);
+      border-bottom: 1px solid var(--border-light);
+    }
+    .services-detailed-list {
+      display: flex;
+      flex-direction: column;
+      gap: 5rem;
+      padding-top: 5rem;
+      padding-bottom: 6rem;
+    }
+    .service-detail-item {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      padding-bottom: 4.5rem;
+      border-bottom: 1px solid var(--border-light);
+    }
+    .service-detail-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .service-detail-item.reverse {
+      grid-template-columns: 1fr 1.1fr;
+    }
+    .service-detail-item.reverse .service-detail-content {
+      order: 2;
+    }
+    .service-detail-item.reverse .service-detail-media {
+      order: 1;
+    }
+    .service-badge-num {
+      font-family: var(--font-mono);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    .service-spec-list {
+      margin-top: 1.5rem;
+      margin-bottom: 2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.85rem;
+    }
+    .service-spec-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.65rem;
+      font-size: 0.925rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+    .service-spec-item::before {
+      content: '✓';
+      color: var(--primary);
+      font-weight: 800;
+    }
+    .service-detail-media img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      border-radius: 4px;
+
+    }
+    .mining-highlight-box {
+      background: #FFF7F2;
+      border-left: 3px solid var(--primary);
+      padding: 1rem 1.25rem;
+      margin-top: 1rem;
+      margin-bottom: 1.5rem;
+      font-size: 0.925rem;
+      color: #7A3500;
+      border-radius: 0 4px 4px 0;
+    }
+    @media (max-width: 868px) {
+      .service-detail-item, .service-detail-item.reverse {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .service-detail-item.reverse .service-detail-content {
+        order: 1;
+      }
+      .service-detail-item.reverse .service-detail-media {
+        order: 2;
+      }
+      .service-spec-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="site-container header-inner">
+      <a href="index.html" class="brand-wrapper">
+        <img src="assets/logo/Logo.png" alt="Aadithiya Group Logo" class="brand-logo-img">
+        <div class="brand-info">
+          <span class="brand-name">AADITHIYA <span>GROUP</span></span>
+          <span class="brand-subtitle">Sri Aathithya Infra</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="services.html" class="nav-link active">Services</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="about-us.html" class="nav-link">About Us</a></li>
+          <li><a href="careers.html" class="nav-link">Careers</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="tel:+919500777777" class="btn-call">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+          </svg>
+          Call Now!
+        </a>
+        <button class="hamburger-btn" aria-label="Toggle navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="services.html" class="mobile-nav-link active">Services</a></li>
+      <li><a href="projects.html" class="mobile-nav-link">Projects</a></li>
+      <li><a href="about-us.html" class="mobile-nav-link">About Us</a></li>
+      <li><a href="careers.html" class="mobile-nav-link">Careers</a></li>
+      <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="site-container">
+      <span class="section-tagline">Sri Aathithya Infra Project Pvt Ltd</span>
+      <h1 class="section-title accent">Our Core Infrastructure Disciplines</h1>
+      <p class="section-desc" style="max-width: 780px;">
+        Eight integrated infrastructure capabilities delivered completely in-house with wholly owned plant, heavy machinery fleet, and captive quarry resources.
+      </p>
+    </div>
+  </div>
+
+  <!-- DETAILED SERVICES LIST -->
+  <main class="site-container services-detailed-list">
+
+    <!-- 1. Highways Construction -->
+    <article class="service-detail-item" id="highways-construction">
+      <div class="service-detail-content">
+        <div class="service-badge-num">01</div>
+        <span class="section-tagline">Highways & Expressways</span>
+        <h2 class="section-title" style="font-size: 1.85rem;">Highways Construction (NHAI & MoRTH)</h2>
+        <p class="section-desc">
+          Turnkey engineering and execution for national highway corridors, bypasses, and capacity expansions meeting rigorous MoRTH standards.
+        </p>
+        <div class="service-spec-list">
+          <div class="service-spec-item">Recording initial levels with client survey teams</div>
+          <div class="service-spec-item">Mass earthworks & embankment cut-and-fill</div>
+          <div class="service-spec-item">Soil transportation, grading, curing & compaction</div>
+          <div class="service-spec-item">GSB, WMM, DBM & BC laying with sensor paver machines</div>
+          <div class="service-spec-item">Construction of small box culverts & minor bridges</div>
+          <div class="service-spec-item">Lane markings, road furniture & canopy signboards</div>
+        </div>
+        <a href="contact.html" class="btn-pill btn-dark">Enquire About Highway Works</a>
+      </div>
+      <div class="service-detail-media">
+        <img src="assets/images/feature-1-commercial.jpg" alt="Highways Construction" loading="lazy">
+      </div>
+    </article>
+
+    <!-- 2. Railways Works -->
+    <article class="service-detail-item reverse" id="railways-works">
+      <div class="service-detail-content">
+        <div class="service-badge-num">02</div>
+        <span class="section-tagline">Railway Infrastructure</span>
+        <h2 class="section-title" style="font-size: 1.85rem;">Railways Works</h2>
+        <p class="section-desc">
+          Specialised civil contracts supporting railway corridor expansion, earthwork formation, track subgrade stabilisation, and railway level-crossing approaches.
+        </p>
+        <div class="service-spec-list">
+          <div class="service-spec-item">Railway embankment bed cutting, filling & compaction</div>
+          <div class="service-spec-item">Track sub-ballast supply & mechanical spreading</div>
+          <div class="service-spec-item">Road-over-bridge (ROB) & under-bridge (RUB) approach civil works</div>
+          <div class="service-spec-item">Retaining walls, side drains & slope protection structures</div>
+        </div>
+        <a href="contact.html" class="btn-pill btn-dark">Enquire About Railways Works</a>
+      </div>
+      <div class="service-detail-media">
+        <img src="assets/images/project-4-railway.jpg" alt="Railways Infrastructure Works" loading="lazy">
+      </div>
+    </article>
+
+    <!-- 3. State Highway Construction -->
+    <article class="service-detail-item" id="state-highways">
+      <div class="service-detail-content">
+        <div class="service-badge-num">03</div>
+        <span class="section-tagline">State & Rural Networks</span>
+        <h2 class="section-title" style="font-size: 1.85rem;">State Highway Construction & DRDA Works</h2>
+        <p class="section-desc">
+          End-to-end execution of State Highways Department, District Rural Development Agency (DRDA), and PMGSY road networks.
+        </p>
+        <div class="service-spec-list">
+          <div class="service-spec-item">State highway widening, strengthening & black-topping</div>
+          <div class="service-spec-item">Rural roads under Namakku Naame Thittam (NNT) & PMGSY</div>
+          <div class="service-spec-item">Shoulder reprofiling, grading & automated roller compaction</div>
+          <div class="service-spec-item">Maintenance of road assets & right-of-way (ROW) cleaning</div>
+        </div>
+        <a href="contact.html" class="btn-pill btn-dark">Enquire About State Highway Works</a>
+      </div>
+      <div class="service-detail-media">
+        <img src="assets/images/road construction.jpg" alt="State Highway Road Construction" loading="lazy">
+      </div>
+    </article>
+
+    <!-- 4. Mining of Major & Minor Minerals -->
+    <article class="service-detail-item reverse" id="mining">
+      <div class="service-detail-content">
+        <div class="service-badge-num">04</div>
+        <span class="section-tagline">Quarry, Blue Metals & Gold Mining</span>
+        <h2 class="section-title" style="font-size: 1.85rem;">Mining of Major & Minor Minerals</h2>
+        <p class="section-desc">
+          Pioneers in aggregate extraction, operating a 75-acre captive stone quarry, 350 TPH 3-stage crusher plant, and 300 TPH sand wash plant.
+        </p>
+        <div class="mining-highlight-box">
+          <strong>International Mining Division (Zambia Gold Project):</strong> Proposed 800-acre large-scale gold mining operation in Lusaka, Zambia under mining lease. Stage I clearance secured from Government of Zambia; operations planned by end of 2026.
+        </div>
+        <div class="service-spec-list">
+          <div class="service-spec-item">Overburden & waste rock removal</div>
+          <div class="service-spec-item">Controlled rock blasting with utmost safety</div>
+          <div class="service-spec-item">350 TPH crusher plant aggregate sizing</div>
+          <div class="service-spec-item">300 TPH sand washing for certified M-Sand & P-Sand</div>
+        </div>
+        <a href="contact.html" class="btn-pill btn-dark">Order Aggregates / Mining Enquiries</a>
+      </div>
+      <div class="service-detail-media">
+        <img src="assets/images/quarry operation 1.jpg" alt="Quarry Operations and Blue Metals" loading="lazy">
+      </div>
+    </article>
+
+    <!-- 5. Approach Road for Fuel Pump & PESO License -->
+    <article class="service-detail-item" id="fuel-peso">
+      <div class="service-detail-content">
+        <div class="service-badge-num">05</div>
+        <span class="section-tagline">Retail Outlets & Petroleum Clearance</span>
+        <h2 class="section-title" style="font-size: 1.85rem;">Approach Road for Fuel Pump & PESO License</h2>
+        <p class="section-desc">
+          Complete turnkey development of statutory highway access, ingress/egress deceleration and acceleration lanes for petrol pumps and commercial establishments.
+        </p>
+        <div class="service-spec-list">
+          <div class="service-spec-item">IRC:12 normative geometric layout & profile engineering</div>
+          <div class="service-spec-item">Approach road asphalt paving, culvert crossing & curbs</div>
+          <div class="service-spec-item">Coordination for PESO (Petroleum & Explosives Safety Org) approval</div>
+          <div class="service-spec-item">NHAI & State Highways NOC clearance documentation</div>
+        </div>
+        <a href="contact.html" class="btn-pill btn-dark">Consult for Fuel Pump Road & PESO</a>
+      </div>
+      <div class="service-detail-media">
+        <img src="assets/images/feature-3-res-small.jpg" alt="Approach Road Engineering" loading="lazy">
+      </div>
+    </article>
+
+    <!-- 6. EHT / HT Line Shifting & Utility Works -->
+    <article class="service-detail-item reverse" id="eht-utility">
+      <div class="service-detail-content">
+        <div class="service-badge-num">06</div>
+        <span class="section-tagline">High-Voltage Power Corridors</span>
+        <h2 class="section-title" style="font-size: 1.85rem;">EHT / HT Line Shifting & Utility Shifting Works</h2>
+        <p class="section-desc">
+          Critical-path utility diversion along highway rights-of-way (ROW), executing extra-high tension (EHT) transmission tower foundations, fabrication, and stringing.
+        </p>
+        <div class="service-spec-list">
+          <div class="service-spec-item">Land acquisition & liaison with TANTRANSCO / Power Grid</div>
+          <div class="service-spec-item">Stud fixing, pile foundations & rock anchoring</div>
+          <div class="service-spec-item">Tower erection & conductor tension stringing</div>
+          <div class="service-spec-item">Obtaining Line Clearance (LC), load transfer & testing</div>
+          <div class="service-spec-item">Municipal water & utility pipeline relocation</div>
+        </div>
+        <a href="contact.html" class="btn-pill btn-dark">Enquire About EHT & Utilities</a>
+      </div>
+      <div class="service-detail-media">
+        <img src="assets/images/HT Line Shifting.jpg" alt="EHT Transmission Line Tower Works" loading="lazy">
+      </div>
+    </article>
+
+    <!-- 7. Transportation & Bulk Carriers Services -->
+    <article class="service-detail-item" id="transportation">
+      <div class="service-detail-content">
+        <div class="service-badge-num">07</div>
+        <span class="section-tagline">Heavy Logistics Fleet</span>
+        <h2 class="section-title" style="font-size: 1.85rem;">Transportation & Bulk Carriers Services</h2>
+        <p class="section-desc">
+          Wholly owned heavy transport fleet powering timely, large-volume haulage of excavated earth, rock boulders, aggregates, and ready-mix concrete.
+        </p>
+        <div class="service-spec-list">
+          <div class="service-spec-item">Fleet of 32 heavy tippers & 15 rock dumpers</div>
+          <div class="service-spec-item">5 high-capacity water tankers for dust suppression & curing</div>
+          <div class="service-spec-item">3 transit mixers for mobile concrete placement</div>
+          <div class="service-spec-item">Dedicated service vans and mobile mechanic units for 100% uptime</div>
+        </div>
+        <a href="contact.html" class="btn-pill btn-dark">Book Bulk Carrier Logistics</a>
+      </div>
+      <div class="service-detail-media">
+        <img src="assets/images/about-bg.jpg" alt="Heavy Fleet Logistics" loading="lazy">
+      </div>
+    </article>
+
+    <!-- 8. Company CSR Services -->
+    <article class="service-detail-item reverse" id="csr-services">
+      <div class="service-detail-content">
+        <div class="service-badge-num">08</div>
+        <span class="section-tagline">Social Responsibility & Community</span>
+        <h2 class="section-title" style="font-size: 1.85rem;">Company CSR Services</h2>
+        <p class="section-desc">
+          Deeply committed to nation-building, Sri Aathithya Infra actively contributes to public infrastructure, rural development, and community welfare across Tamil Nadu.
+        </p>
+        <div class="service-spec-list">
+          <div class="service-spec-item">School building construction under SIDS / DRDA schemes</div>
+          <div class="service-spec-item">Rural connectivity development via Namakku Naame Thittam</div>
+          <div class="service-spec-item">Free drinking water tanker distribution during dry seasons</div>
+          <div class="service-spec-item">Highway road safety awareness campaigns and community support</div>
+        </div>
+        <a href="contact.html" class="btn-pill btn-dark">Learn About CSR Partnerships</a>
+      </div>
+      <div class="service-detail-media">
+        <img src="assets/images/feature-2-infra.jpg" alt="Community CSR Infrastructure" loading="lazy">
+      </div>
+    </article>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="site-container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+                    <a href="index.html" class="footer-brand-logo-wrap">
+            <div class="footer-logo-badge">
+              <img src="assets/logo/Logo.png" alt="Sri Aathithya Infra Logo" class="footer-logo-img">
+            </div>
+          </a>
+          <p class="footer-text">
+            Design engineering, highway construction, and contracting solutions across Tamil Nadu.
+          </p>
+          <a href="contact.html" class="btn-pill btn-footer">Contact Us</a>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Head Office</h4>
+          <p class="footer-text">
+            Flat No. 620/61A4, Sathyanagar,<br>
+            Chettinaickenpatti, Dindigul,<br>
+            Tamil Nadu – 624004
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Inquiries</h4>
+          <p class="footer-text">
+            <strong>Phone:</strong> <a href="tel:+919500777777" style="color: #FFF; text-decoration: underline;">+91 95007 77777</a><br>
+            <strong>Email:</strong> <a href="mailto:sriaathithyainfraprojectpvtltd@gmail.com" style="color: #FFF; text-decoration: underline;">sriaathithyainfraprojectpvtltd@gmail.com</a>
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Menu</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Sister Concerns</h4>
+          <ul class="footer-links-list">
+            <li><a href="#mining">M/s Sri Aathithya Blue Metals (350 TPH)</a></li>
+            <li><a href="about-us.html">M/s Kannan Contractor (Since 2018)</a></li>
+            <li><a href="#mining">M/s Aathithya Blue Metals</a></li>
+            <li><a href="#mining">M/s Sri Aathithya Sands (M-Sand / P-Sand)</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom-bar">
+        <div class="footer-legal-links">
+          <a href="contact.html#terms">Terms & Conditions</a>
+          <a href="contact.html#accessibility">Accessibility Statement</a>
+          <a href="contact.html#privacy">Privacy Policy</a>
+        </div>
+        <div>
+          GSTIN: 33ABNCS2699J1ZO • &copy; 2026 Sri Aathithya Infra Project Private Limited. All rights reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
