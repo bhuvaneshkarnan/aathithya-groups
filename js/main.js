@@ -19,18 +19,37 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileLinks = document.querySelectorAll('.mobile-nav-link');
 
   if (hamburgerBtn && mobileDrawer) {
+    const closeDrawer = () => {
+      mobileDrawer.classList.remove('open');
+      hamburgerBtn.classList.remove('active');
+      hamburgerBtn.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    };
+
     hamburgerBtn.addEventListener('click', () => {
-      mobileDrawer.classList.toggle('open');
-      const isOpen = mobileDrawer.classList.contains('open');
-      hamburgerBtn.setAttribute('aria-expanded', isOpen);
-      document.body.style.overflow = isOpen ? 'hidden' : '';
+      const willOpen = !mobileDrawer.classList.contains('open');
+      mobileDrawer.classList.toggle('open', willOpen);
+      hamburgerBtn.classList.toggle('active', willOpen);
+      hamburgerBtn.setAttribute('aria-expanded', willOpen);
+      document.body.style.overflow = willOpen ? 'hidden' : '';
     });
 
     mobileLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        mobileDrawer.classList.remove('open');
-        document.body.style.overflow = '';
-      });
+      link.addEventListener('click', closeDrawer);
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileDrawer.classList.contains('open')) {
+        closeDrawer();
+      }
+    });
+
+    // Close on resize if switching back to desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 868 && mobileDrawer.classList.contains('open')) {
+        closeDrawer();
+      }
     });
   }
 

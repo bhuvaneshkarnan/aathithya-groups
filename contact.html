@@ -116,13 +116,13 @@
       </nav>
 
       <div class="header-actions">
-        <a href="tel:+919500777777" class="btn-call">
+        <a href="tel:+919500777777" class="btn-call" aria-label="Call Now: +91 95007 77777">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
             <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
           </svg>
-          Call Now!
+          <span>Call Now!</span>
         </a>
-        <button class="hamburger-btn" aria-label="Toggle navigation menu">
+        <button class="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -132,12 +132,49 @@
   <!-- Mobile Drawer -->
   <div class="mobile-drawer" id="mobileDrawer">
     <ul class="mobile-nav-list">
-      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
-      <li><a href="services.html" class="mobile-nav-link">Services</a></li>
-      <li><a href="projects.html" class="mobile-nav-link">Projects</a></li>
-      <li><a href="about-us.html" class="mobile-nav-link">About Us</a></li>
-      <li><a href="contact.html" class="mobile-nav-link active">Contact</a></li>
+      <li>
+        <a href="index.html" class="mobile-nav-link">
+          <span>Home</span>
+          <svg class="mobile-nav-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
+      </li>
+      <li>
+        <a href="services.html" class="mobile-nav-link">
+          <span>Services</span>
+          <svg class="mobile-nav-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
+      </li>
+      <li>
+        <a href="projects.html" class="mobile-nav-link">
+          <span>Projects</span>
+          <svg class="mobile-nav-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
+      </li>
+      <li>
+        <a href="about-us.html" class="mobile-nav-link">
+          <span>About Us</span>
+          <svg class="mobile-nav-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
+      </li>
+      <li>
+        <a href="contact.html" class="mobile-nav-link active">
+          <span>Contact</span>
+          <svg class="mobile-nav-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
+      </li>
     </ul>
+    <div class="mobile-drawer-footer">
+      <a href="tel:+919500777777" class="btn-pill btn-primary" style="width: 100%;">
+        Call Now: +91 95007 77777
+      </a>
+      <a href="contact.html" class="btn-pill btn-dark" style="width: 100%;">
+        Request Tender Quotation
+      </a>
+      <div class="mobile-drawer-info">
+        Sri Aathithya Infra Project Pvt Ltd<br>
+        Audited Class-1 Highways & Infrastructure Contractor
+      </div>
+    </div>
   </div>
 
   <!-- PAGE HERO -->
