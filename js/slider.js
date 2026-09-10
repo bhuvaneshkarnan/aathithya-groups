@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: "NHAI / Toll Infrastructure",
       client: "NH-183, Dindigul – Theni Section",
       value: "₹ 79 Lakhs",
-      img: "assets/images/project-1-interchange.jpg",
+      img: "assets/images/projects/project-site-2.webp",
       desc: "Full architectural layout and execution of multi-lane ETC FASTag toll infrastructure, civil foundations, structural canopy, toll booth installation, and high-speed tolling equipment commissioning."
     },
     {
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: "Power Transmission / High Voltage",
       client: "NHAI PIU, Dindigul",
       value: "₹ 2,587 Lakhs",
-      img: "assets/images/project-2-viaduct.jpg",
+      img: "assets/images/projects/project-site-5.webp",
       desc: "Comprehensive engineering, route survey, land clearance, foundation pile works, tower erection, and conductor re-stringing for extra high tension electrical corridors along the highway right of way."
     },
     {
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: "Highway Earthworks & Pavements",
       client: "South Tamil Nadu Corridor",
       value: "₹ 1,983 Lakhs",
-      img: "assets/images/project-3-skyscraper.jpg",
+      img: "assets/images/projects/project-site-1.webp",
       desc: "Mass earthwork excavation, subgrade stabilisation, Granular Sub-Base (GSB), Wet Mix Macadam (WMM), and Dense Bituminous Macadam (DBM) laying utilizing company-owned sensor paver finishers."
     },
     {
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: "Road Safety & Furniture",
       client: "NH-44, NH-209 & NH-38",
       value: "₹ 412 Lakhs",
-      img: "assets/images/project-4-railway.jpg",
+      img: "assets/images/projects/project-site-7.webp",
       desc: "Deployment of W-beam metal crash barriers, high-intensity prismatic cautionary and informative signage, thermoplastic reflective road marking, and structural hazard alleviation across key accident blackspots."
     }
   ];
