@@ -1341,11 +1341,11 @@ h1, h2, h3, h4, h5, h6 {
   background: #11141A;
   color: #FFFFFF;
   border-radius: 6px;
-  padding: 2.25rem 2.75rem;
+  padding: 2rem 2.5rem;
   display: flex;
   align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2.25rem;
 }
 
 .growth-callout-box .callout-icon {
@@ -1361,7 +1361,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .growth-callout-box .callout-text {
-  flex-grow: 1;
+  flex: 1 1 auto;
+}
+
+.growth-callout-box .btn-pill {
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .growth-callout-box h4 {
