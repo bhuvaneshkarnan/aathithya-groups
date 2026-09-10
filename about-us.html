@@ -27,44 +27,130 @@
       border-top: 1px solid var(--border-light);
       border-bottom: 1px solid var(--border-light);
     }
-    .turnover-bars {
+    .turnover-chart-container {
+      margin-top: 2.5rem;
+      overflow-x: auto;
+      padding-bottom: 0.75rem;
+      -webkit-overflow-scrolling: touch;
+    }
+    .turnover-chart-container::-webkit-scrollbar {
+      height: 6px;
+    }
+    .turnover-chart-container::-webkit-scrollbar-track {
+      background: #EAEAEA;
+      border-radius: 4px;
+    }
+    .turnover-chart-container::-webkit-scrollbar-thumb {
+      background: #B0B0B0;
+      border-radius: 4px;
+    }
+    .turnover-chart-container::-webkit-scrollbar-thumb:hover {
+      background: var(--primary);
+    }
+    .turnover-chart-inner {
+      min-width: 760px;
+    }
+    .chart-bars-area {
+      height: 260px;
       display: grid;
       grid-template-columns: repeat(6, 1fr);
       gap: 1.5rem;
-      margin-top: 3rem;
       align-items: flex-end;
-      height: 320px;
-      padding-bottom: 2rem;
-      border-bottom: 2px solid var(--border-light);
+      border-bottom: 2px solid #D6D6D6;
+      padding-bottom: 0;
+      margin-bottom: 0;
     }
-    .bar-col {
+    .chart-col {
       display: flex;
       flex-direction: column;
       align-items: center;
-      height: 100%;
       justify-content: flex-end;
+      height: 100%;
     }
-    .bar-pill {
-      width: 100%;
-      max-width: 90px;
-      background-color: var(--primary);
-      border-radius: 6px 6px 0 0;
-      transition: height 1s ease;
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
-      padding-top: 0.5rem;
-      color: #FFF;
+    .chart-value-tag {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
       font-weight: 700;
-      font-family: var(--font-mono);
-      font-size: 0.9rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+      white-space: nowrap;
     }
-    .bar-label {
-      margin-top: 0.75rem;
-      font-size: 0.8125rem;
-      font-weight: 600;
-      color: var(--text-muted);
+    .chart-col.active-col .chart-value-tag {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+    .chart-bar {
+      width: 100%;
+      max-width: 68px;
+      background-color: var(--primary);
+      border-radius: 4px 4px 0 0;
+      transition: height 0.6s ease;
+    }
+    .chart-col.active-col .chart-bar {
+      background-color: var(--primary);
+      position: relative;
+    }
+    .chart-labels-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 1.5rem;
+      padding-top: 1.15rem;
+    }
+    .chart-label-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
+      gap: 0.25rem;
+    }
+    .label-year {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #000000;
+    }
+    .label-amount {
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+    }
+    .label-badge {
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.2rem 0.55rem;
+      border-radius: 9999px;
+      margin-top: 0.35rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .badge-subtle {
+      background: #F0F0F0;
+      color: #666666;
+    }
+    .badge-growth {
+      background: rgba(189, 79, 0, 0.08);
+      color: var(--primary);
+    }
+    .badge-active {
+      background: var(--primary);
+      color: #FFFFFF;
+    }
+    .chart-scroll-hint {
+      display: none;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-top: 1.25rem;
+      margin-bottom: 0.25rem;
+      align-items: center;
+      gap: 0.35rem;
+    }
+    @media (max-width: 820px) {
+      .chart-scroll-hint {
+        display: inline-flex;
+      }
     }
     .fleet-table-container {
       margin-top: 3rem;
@@ -166,10 +252,6 @@
     @media (max-width: 992px) {
       .about-story-section {
         grid-template-columns: 1fr;
-      }
-      .turnover-bars {
-        grid-template-columns: repeat(3, 1fr);
-        height: auto;
       }
       .sister-grid, .team-grid {
         grid-template-columns: 1fr;
@@ -439,30 +521,74 @@
         Audited annual revenue from FY 2020–21 through the ongoing FY 2025–26 — reflecting strong execution capability and institutional client trust.
       </p>
 
-      <div class="turnover-bars">
-        <div class="bar-col">
-          <div class="bar-pill" style="height: 35px;">₹ 47L</div>
-          <div class="bar-label">2020–21<br>₹ 47,00,000</div>
-        </div>
-        <div class="bar-col">
-          <div class="bar-pill" style="height: 48px;">₹ 59L</div>
-          <div class="bar-label">2021–22<br>₹ 59,00,000</div>
-        </div>
-        <div class="bar-col">
-          <div class="bar-pill" style="height: 75px;">₹ 1.33Cr</div>
-          <div class="bar-label">2022–23<br>₹ 1,33,00,000</div>
-        </div>
-        <div class="bar-col">
-          <div class="bar-pill" style="height: 140px;">₹ 8.57Cr</div>
-          <div class="bar-label">2023–24<br>₹ 8,57,00,000</div>
-        </div>
-        <div class="bar-col">
-          <div class="bar-pill" style="height: 220px;">₹ 17.86Cr</div>
-          <div class="bar-label">2024–25<br>₹ 17,86,00,000</div>
-        </div>
-        <div class="bar-col">
-          <div class="bar-pill" style="height: 300px; background-color: var(--primary);">₹ 41.29Cr</div>
-          <div class="bar-label">2025–26 (Ongoing)<br>₹ 41,29,00,000</div>
+      <div class="chart-scroll-hint">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <span>Scroll horizontally to view full 6-year audited growth</span>
+      </div>
+
+      <div class="turnover-chart-container">
+        <div class="turnover-chart-inner">
+          <!-- Bars Area -->
+          <div class="chart-bars-area">
+            <div class="chart-col">
+              <span class="chart-value-tag">₹ 47L</span>
+              <div class="chart-bar" style="height: 28px;"></div>
+            </div>
+            <div class="chart-col">
+              <span class="chart-value-tag">₹ 59L</span>
+              <div class="chart-bar" style="height: 35px;"></div>
+            </div>
+            <div class="chart-col">
+              <span class="chart-value-tag">₹ 1.33Cr</span>
+              <div class="chart-bar" style="height: 52px;"></div>
+            </div>
+            <div class="chart-col">
+              <span class="chart-value-tag">₹ 8.57Cr</span>
+              <div class="chart-bar" style="height: 98px;"></div>
+            </div>
+            <div class="chart-col">
+              <span class="chart-value-tag">₹ 17.86Cr</span>
+              <div class="chart-bar" style="height: 148px;"></div>
+            </div>
+            <div class="chart-col active-col">
+              <span class="chart-value-tag">₹ 41.29Cr</span>
+              <div class="chart-bar" style="height: 200px;"></div>
+            </div>
+          </div>
+
+          <!-- Labels Area -->
+          <div class="chart-labels-grid">
+            <div class="chart-label-item">
+              <span class="label-year">2020–21</span>
+              <span class="label-amount">₹ 47,00,000</span>
+              <span class="label-badge badge-subtle">Foundation</span>
+            </div>
+            <div class="chart-label-item">
+              <span class="label-year">2021–22</span>
+              <span class="label-amount">₹ 59,00,000</span>
+              <span class="label-badge badge-growth">+25.5% Growth</span>
+            </div>
+            <div class="chart-label-item">
+              <span class="label-year">2022–23</span>
+              <span class="label-amount">₹ 1,33,00,000</span>
+              <span class="label-badge badge-growth">+125% Expansion</span>
+            </div>
+            <div class="chart-label-item">
+              <span class="label-year">2023–24</span>
+              <span class="label-amount">₹ 8,57,00,000</span>
+              <span class="label-badge badge-growth">+544% Major Scale</span>
+            </div>
+            <div class="chart-label-item">
+              <span class="label-year">2024–25</span>
+              <span class="label-amount">₹ 17,86,00,000</span>
+              <span class="label-badge badge-growth">+108% Scale</span>
+            </div>
+            <div class="chart-label-item">
+              <span class="label-year" style="color: var(--primary);">2025–26</span>
+              <span class="label-amount" style="color: #000; font-weight: 700;">₹ 41,29,00,000</span>
+              <span class="label-badge badge-active">Ongoing Peak</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
