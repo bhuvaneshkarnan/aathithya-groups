@@ -10,6 +10,12 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/logo/Logo.png">
 
+  <!-- Performance: Preconnect & High-Speed Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Urbanist:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700&family=Wix+Madefor+Text:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap">
+  <link rel="preload" as="image" href="assets/images/hero-poster.jpg" fetchpriority="high">
+
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -22,7 +28,7 @@
     <div class="site-container header-inner">
       <!-- Logo -->
       <a href="index.html" class="brand-wrapper">
-        <img src="assets/logo/Logo.png" alt="Aadithiya Group Logo" class="brand-logo-img">
+        <img decoding="async" fetchpriority="high" src="assets/logo/Logo.png" alt="Aadithiya Group Logo" class="brand-logo-img">
         <div class="brand-info">
           <span class="brand-name">AADITHIYA <span>GROUP</span></span>
           <span class="brand-subtitle">Sri Aathithya Infra</span>
@@ -84,7 +90,7 @@
        ======================================================================== -->
   <section class="hero-section" id="home">
     <div class="hero-media-wrapper">
-      <video id="heroVideo" class="hero-video" autoplay muted loop playsinline poster="assets/images/hero-poster.jpg">
+      <video preload="metadata" id="heroVideo" class="hero-video" autoplay muted loop playsinline poster="assets/images/hero-poster.jpg">
         <source src="assets/images/hero-video.mp4" type="video/mp4">
       </video>
       <div class="hero-overlay"></div>
@@ -136,7 +142,7 @@
           </div>
           <div class="feature-media-col">
             <div class="feature-img-card">
-              <img src="assets/images/feature-1-commercial.jpg" alt="Commercial Road and Highway Construction" loading="lazy">
+              <img decoding="async" src="assets/images/feature-1-commercial.jpg" alt="Commercial Road and Highway Construction" loading="lazy">
             </div>
           </div>
         </div>
@@ -155,7 +161,7 @@
           </div>
           <div class="feature-media-col">
             <div class="feature-img-card">
-              <img src="assets/images/feature-2-infra.jpg" alt="EHT Transmission Infrastructure and Viaduct Works" loading="lazy">
+              <img decoding="async" src="assets/images/feature-2-infra.jpg" alt="EHT Transmission Infrastructure and Viaduct Works" loading="lazy">
             </div>
           </div>
         </div>
@@ -174,8 +180,8 @@
           </div>
           <div class="feature-media-col">
             <div class="dual-img-wrap">
-              <img src="assets/images/feature-3-res-small.jpg" alt="Residential Site Development" class="small-img" loading="lazy">
-              <img src="assets/images/feature-3-res-large.jpg" alt="Quarry and Structural Construction" class="main-img" loading="lazy">
+              <img decoding="async" src="assets/images/feature-3-res-small.jpg" alt="Residential Site Development" class="small-img" loading="lazy">
+              <img decoding="async" src="assets/images/feature-3-res-large.jpg" alt="Quarry and Structural Construction" class="main-img" loading="lazy">
             </div>
           </div>
         </div>
@@ -188,7 +194,7 @@
        ======================================================================== -->
   <section class="about-stats-section" id="about">
     <div class="about-bg-media">
-      <img src="assets/images/about-bg.jpg" alt="Earthmoving Excavators and Machinery at Dusk" loading="lazy">
+      <img decoding="async" src="assets/images/about-bg.jpg" alt="Earthmoving Excavators and Machinery at Dusk" loading="lazy">
     </div>
     <div class="about-overlay"></div>
 
@@ -206,7 +212,7 @@
           </p>
 
           <div class="leadership-badge">
-            <img src="assets/images/kannan.jpeg" alt="S. Kannan, Managing Director" class="leader-avatar">
+            <img decoding="async" loading="lazy" src="assets/images/kannan.jpeg" alt="S. Kannan, Managing Director" class="leader-avatar">
             <div class="leader-details">
               <h4>S. Kannan</h4>
               <p>Managing Director, Sri Aathithya Infra Project Pvt Ltd</p>
@@ -262,7 +268,7 @@
         <!-- 1. Highways Construction -->
         <div class="service-card">
           <div class="service-icon-wrap">
-            <img src="assets/icons/service-1-highways.svg" alt="Highways Construction Icon">
+            <img decoding="async" loading="lazy" src="assets/icons/service-1-highways.svg" alt="Highways Construction Icon">
           </div>
           <h3 class="service-title">Highways Construction</h3>
         </div>
@@ -270,7 +276,7 @@
         <!-- 2. Railways Works -->
         <div class="service-card">
           <div class="service-icon-wrap">
-            <img src="assets/icons/service-2-railways.svg" alt="Railways Works Icon">
+            <img decoding="async" loading="lazy" src="assets/icons/service-2-railways.svg" alt="Railways Works Icon">
           </div>
           <h3 class="service-title">Railways Works</h3>
         </div>
@@ -278,7 +284,7 @@
         <!-- 3. State Highway Construction -->
         <div class="service-card">
           <div class="service-icon-wrap">
-            <img src="assets/icons/service-3-state-highways.svg" alt="State Highway Construction Icon">
+            <img decoding="async" loading="lazy" src="assets/icons/service-3-state-highways.svg" alt="State Highway Construction Icon">
           </div>
           <h3 class="service-title">State Highway Construction</h3>
         </div>
@@ -286,7 +292,7 @@
         <!-- 4. Mining of Major & Minor Minerals -->
         <div class="service-card">
           <div class="service-icon-wrap">
-            <img src="assets/icons/service-4-mining.svg" alt="Mining of Major and Minor Minerals Icon">
+            <img decoding="async" loading="lazy" src="assets/icons/service-4-mining.svg" alt="Mining of Major and Minor Minerals Icon">
           </div>
           <h3 class="service-title">Mining of Major & Minor Minerals</h3>
         </div>
@@ -294,7 +300,7 @@
         <!-- 5. Approach Road for Fuel Pump & PESO License -->
         <div class="service-card">
           <div class="service-icon-wrap">
-            <img src="assets/icons/service-5-fuel-peso.svg" alt="Fuel Pump Approach Road and PESO License Icon">
+            <img decoding="async" loading="lazy" src="assets/icons/service-5-fuel-peso.svg" alt="Fuel Pump Approach Road and PESO License Icon">
           </div>
           <h3 class="service-title">Approach Road for Fuel Pump & PESO License</h3>
         </div>
@@ -302,7 +308,7 @@
         <!-- 6. EHT / HT Line Shifting & Utility Shifting -->
         <div class="service-card">
           <div class="service-icon-wrap">
-            <img src="assets/icons/service-6-eht.svg" alt="EHT / HT Line Shifting Icon">
+            <img decoding="async" loading="lazy" src="assets/icons/service-6-eht.svg" alt="EHT / HT Line Shifting Icon">
           </div>
           <h3 class="service-title">EHT / HT Line Shifting & Utility Shifting Works</h3>
         </div>
@@ -310,7 +316,7 @@
         <!-- 7. Transportation & Bulk Carriers Services -->
         <div class="service-card">
           <div class="service-icon-wrap">
-            <img src="assets/icons/service-7-transport.svg" alt="Transportation & Bulk Carriers Services Icon">
+            <img decoding="async" loading="lazy" src="assets/icons/service-7-transport.svg" alt="Transportation & Bulk Carriers Services Icon">
           </div>
           <h3 class="service-title">Transportation & Bulk Carriers Services</h3>
         </div>
@@ -318,7 +324,7 @@
         <!-- 8. Company CSR Services -->
         <div class="service-card">
           <div class="service-icon-wrap">
-            <img src="assets/icons/service-8-csr.svg" alt="Company CSR Services Icon">
+            <img decoding="async" loading="lazy" src="assets/icons/service-8-csr.svg" alt="Company CSR Services Icon">
           </div>
           <h3 class="service-title">Company CSR Services</h3>
         </div>
@@ -352,7 +358,7 @@
         <!-- Cluster 1 -->
         <div class="fleet-card">
           <div class="fleet-card-img">
-            <img src="assets/images/about-bg.jpg" alt="Excavators and Earthmoving Fleet" loading="lazy">
+            <img decoding="async" src="assets/images/about-bg.jpg" alt="Excavators and Earthmoving Fleet" loading="lazy">
             <span class="fleet-qty-badge">12 Units</span>
           </div>
           <div class="fleet-card-body">
@@ -368,7 +374,7 @@
         <!-- Cluster 2 -->
         <div class="fleet-card">
           <div class="fleet-card-img">
-            <img src="assets/images/quarry operation 1.jpg" alt="Heavy Tippers and Rock Dumpers" loading="lazy">
+            <img decoding="async" src="assets/images/quarry operation 1.jpg" alt="Heavy Tippers and Rock Dumpers" loading="lazy">
             <span class="fleet-qty-badge">47 Units</span>
           </div>
           <div class="fleet-card-body">
@@ -384,7 +390,7 @@
         <!-- Cluster 3 -->
         <div class="fleet-card">
           <div class="fleet-card-img">
-            <img src="assets/images/road construction.jpg" alt="Pavement Sensor Pavers and Rollers" loading="lazy">
+            <img decoding="async" src="assets/images/road construction.jpg" alt="Pavement Sensor Pavers and Rollers" loading="lazy">
             <span class="fleet-qty-badge">10 Units</span>
           </div>
           <div class="fleet-card-body">
@@ -401,7 +407,7 @@
         <!-- Cluster 4 -->
         <div class="fleet-card">
           <div class="fleet-card-img">
-            <img src="assets/images/feature-3-res-large.jpg" alt="Crusher and Sand Wash Infrastructure" loading="lazy">
+            <img decoding="async" src="assets/images/feature-3-res-large.jpg" alt="Crusher and Sand Wash Infrastructure" loading="lazy">
             <span class="fleet-qty-badge">75 Acres</span>
           </div>
           <div class="fleet-card-body">
@@ -472,7 +478,7 @@
           <!-- Project 1 -->
           <div class="project-card" data-index="0">
             <div class="project-img-box">
-              <img src="assets/images/project-1-interchange.jpg" alt="Sevugampatti Toll Plaza Project" loading="lazy">
+              <img decoding="async" src="assets/images/project-1-interchange.jpg" alt="Sevugampatti Toll Plaza Project" loading="lazy">
             </div>
             <div class="project-card-info">
               <div class="project-card-tag">NHAI Toll Infrastructure</div>
@@ -484,7 +490,7 @@
           <!-- Project 2 -->
           <div class="project-card" data-index="1">
             <div class="project-img-box">
-              <img src="assets/images/project-2-viaduct.jpg" alt="EHT Line Shifting NH-83" loading="lazy">
+              <img decoding="async" src="assets/images/project-2-viaduct.jpg" alt="EHT Line Shifting NH-83" loading="lazy">
             </div>
             <div class="project-card-info">
               <div class="project-card-tag">Power Grid & Utilities</div>
@@ -496,7 +502,7 @@
           <!-- Project 3 -->
           <div class="project-card" data-index="2">
             <div class="project-img-box">
-              <img src="assets/images/project-3-skyscraper.jpg" alt="NH-716B Earthworks Project" loading="lazy">
+              <img decoding="async" src="assets/images/project-3-skyscraper.jpg" alt="NH-716B Earthworks Project" loading="lazy">
             </div>
             <div class="project-card-info">
               <div class="project-card-tag">Highway Earthworks</div>
@@ -508,7 +514,7 @@
           <!-- Project 4 -->
           <div class="project-card" data-index="3">
             <div class="project-img-box">
-              <img src="assets/images/project-4-railway.jpg" alt="Crash Barriers and Signage" loading="lazy">
+              <img decoding="async" src="assets/images/project-4-railway.jpg" alt="Crash Barriers and Signage" loading="lazy">
             </div>
             <div class="project-card-info">
               <div class="project-card-tag">Road Safety Works</div>
@@ -719,7 +725,7 @@
         <div class="footer-brand-col">
                     <a href="index.html" class="footer-brand-logo-wrap">
             <div class="footer-logo-badge">
-              <img src="assets/logo/Logo.png" alt="Sri Aathithya Infra Logo" class="footer-logo-img">
+              <img decoding="async" loading="lazy" src="assets/logo/Logo.png" alt="Sri Aathithya Infra Logo" class="footer-logo-img">
             </div>
           </a>
           <p class="footer-text">
@@ -804,7 +810,7 @@
     <div class="modal-content">
       <button class="modal-close-btn" data-close-modal aria-label="Close modal">&times;</button>
       <div style="position: relative; height: 360px; overflow: hidden; background: #000;">
-        <img id="modalProjectImg" src="" alt="Project Photo" style="width: 100%; height: 100%; object-fit: cover;">
+        <img decoding="async" loading="lazy" id="modalProjectImg" src="" alt="Project Photo" style="width: 100%; height: 100%; object-fit: cover;">
       </div>
       <div style="padding: 2.25rem;">
         <span id="modalProjectCategory" class="section-tagline" style="margin-bottom: 0.5rem;"></span>

@@ -3,8 +3,6 @@
    Exact replica of Wix Construction Template (wh-1085 / MCR Construction)
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Urbanist:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700&family=Wix+Madefor+Text:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
-
 :root {
   /* Brand Tokens */
   --primary: #BD4F00;
