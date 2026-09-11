@@ -748,6 +748,12 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
 }
 
+.feature-img-card picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .feature-img-card img {
   width: 100%;
   height: 520px;
@@ -767,13 +773,20 @@ h1, h2, h3, h4, h5, h6 {
   align-items: flex-end;
 }
 
+.dual-img-wrap picture {
+  display: block;
+  width: 100%;
+}
+
 .dual-img-wrap .small-img {
+  width: 100%;
   height: 280px;
   object-fit: cover;
   border-radius: 4px;
 }
 
 .dual-img-wrap .main-img {
+  width: 100%;
   height: 520px;
   object-fit: cover;
   border-radius: 4px;
@@ -1219,6 +1232,12 @@ h1, h2, h3, h4, h5, h6 {
   height: 200px;
   background-color: #E8E8E8;
   overflow: hidden;
+}
+
+.fleet-card-img picture {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .fleet-card-img img {
