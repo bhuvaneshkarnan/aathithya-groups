@@ -1,5 +1,5 @@
 /* ==========================================================================
-   AADITHIYA GROUP - Projects Carousel & Lightbox (js/slider.js)
+   AATHITHYA GROUPS - Projects Carousel & Lightbox (js/slider.js)
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {

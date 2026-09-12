@@ -1,5 +1,5 @@
 /* ==========================================================================
-   AADITHIYA GROUP - Interactive Scripts (js/main.js)
+   AATHITHYA GROUPS - Interactive Scripts (js/main.js)
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
