@@ -213,7 +213,7 @@
     }
     .team-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(280px, 380px));
       gap: 2.5rem;
       margin-top: 3.5rem;
     }
@@ -718,22 +718,13 @@
 
     <div class="team-grid">
       <div class="team-card">
-        <img decoding="async" loading="lazy" src="assets/images/kannan.jpeg" alt="S. Kannan">
+        <picture>
+          <source srcset="assets/images/kannan.webp" type="image/webp">
+          <img decoding="async" loading="lazy" src="assets/images/kannan.jpeg" alt="S. Kannan">
+        </picture>
         <h3 class="team-name">S. Kannan</h3>
         <div class="team-role">Managing Director</div>
         <div class="team-contact"><a href="tel:+919500777777" style="color: inherit;">+91 95007 77777</a></div>
-      </div>
-      <div class="team-card">
-        <img decoding="async" loading="lazy" src="assets/images/about-badge.png" alt="N. Praveen Kumar">
-        <h3 class="team-name">N. Praveen Kumar</h3>
-        <div class="team-role">Planning & Execution</div>
-        <div class="team-contact"><a href="tel:+919843153838" style="color: inherit;">+91 98431 53838</a></div>
-      </div>
-      <div class="team-card">
-        <img decoding="async" loading="lazy" src="assets/images/about-badge.png" alt="M. Shiv Kumar">
-        <h3 class="team-name">M. Shiv Kumar</h3>
-        <div class="team-role">Project Manager</div>
-        <div class="team-contact"><a href="tel:+918639177990" style="color: inherit;">+91 86391 77990</a></div>
       </div>
     </div>
   </section>
