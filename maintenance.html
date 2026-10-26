@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta http-equiv="refresh" content="300">
+  <title>Under Maintenance — Sri Aathithya Infra Project Pvt Ltd</title>
+  <link rel="icon" type="image/png" href="assets/logo/Logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Urbanist:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #BD4F00;
+      --primary-hover: #D95C00;
+      --primary-glow: rgba(189, 79, 0, 0.28);
+      --dark-bg: #0C0E12;
+      --card-bg: #13171F;
+      --card-border: rgba(255, 255, 255, 0.08);
+      --text-white: #FFFFFF;
+      --text-muted: #9BA3AF;
+      --text-subtle: #6B7280;
+      --font-display: 'Urbanist', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-mono: 'Space Grotesk', monospace;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--dark-bg);
+      color: var(--text-white);
+      font-family: var(--font-display);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow-x: hidden;
+      position: relative;
+      background-image: 
+        radial-gradient(circle at 50% 10%, rgba(189, 79, 0, 0.12) 0%, transparent 60%),
+        linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 100% 100%, 48px 48px, 48px 48px;
+    }
+
+    /* Ambient glow circles */
+    .glow-orb {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(189, 79, 0, 0.15) 0%, rgba(189, 79, 0, 0) 70%);
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      filter: blur(80px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Header */
+    .m-header {
+      position: relative;
+      z-index: 10;
+      padding: 1.75rem 2rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      background: rgba(12, 14, 18, 0.85);
+      backdrop-filter: blur(12px);
+    }
+
+    .m-header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .brand-logo {
+      height: 48px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .brand-name {
+      font-size: 1.35rem;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      line-height: 1.15;
+    }
+
+    .brand-name span {
+      color: var(--primary);
+    }
+
+    .brand-subtitle {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.45rem 0.95rem;
+      background: rgba(189, 79, 0, 0.15);
+      border: 1px solid rgba(189, 79, 0, 0.35);
+      border-radius: 9999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #FFA366;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      background-color: #FF771C;
+      border-radius: 50%;
+      position: relative;
+    }
+
+    .pulse-dot::after {
+      content: '';
+      position: absolute;
+      top: -4px;
+      left: -4px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: rgba(255, 119, 28, 0.5);
+      animation: pulse 2s infinite ease-out;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(0.5); opacity: 1; }
+      100% { transform: scale(1.6); opacity: 0; }
+    }
+
+    /* Main Container */
+    .m-main {
+      position: relative;
+      z-index: 10;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem 3rem;
+      text-align: center;
+      width: 100%;
+    }
+
+    .m-icon-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 76px;
+      height: 76px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, rgba(189, 79, 0, 0.25), rgba(189, 79, 0, 0.05));
+      border: 1px solid rgba(189, 79, 0, 0.4);
+      margin-bottom: 2rem;
+      color: #FF8533;
+      box-shadow: 0 12px 32px var(--primary-glow);
+    }
+
+    .m-eyebrow {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 1rem;
+    }
+
+    .m-title {
+      font-size: clamp(2.4rem, 5.5vw, 4rem);
+      font-weight: 900;
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.25rem;
+      color: #FFFFFF;
+    }
+
+    .m-title span {
+      background: linear-gradient(135deg, #FFFFFF 30%, #FFA86B 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .m-desc {
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+      color: var(--text-muted);
+      line-height: 1.7;
+      max-width: 680px;
+      margin: 0 auto 2.5rem;
+    }
+
+    /* Progress Bar */
+    .progress-box {
+      max-width: 480px;
+      margin: 0 auto 3rem;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      text-align: left;
+    }
+
+    .progress-labels {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 0.65rem;
+      font-family: var(--font-mono);
+    }
+
+    .progress-labels span:last-child {
+      color: #FFA366;
+    }
+
+    .progress-track {
+      width: 100%;
+      height: 6px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 999px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 68%;
+      background: linear-gradient(90deg, var(--primary), #FF8533);
+      border-radius: 999px;
+      position: relative;
+      animation: shimmer 2.2s infinite ease-in-out;
+    }
+
+    @keyframes shimmer {
+      0%, 100% { opacity: 0.9; }
+      50% { opacity: 0.6; }
+    }
+
+    /* Business As Usual Card */
+    .contact-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 2.25rem;
+      max-width: 820px;
+      margin: 0 auto;
+      text-align: left;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+    }
+
+    .contact-card-header {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .contact-card-header h3 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #FFFFFF;
+    }
+
+    .notice-tag {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.25rem 0.6rem;
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      color: #34D399;
+      border-radius: 6px;
+    }
+
+    .contact-card p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 1.75rem;
+    }
+
+    /* Actions Grid */
+    .action-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 1rem;
+    }
+
+    .action-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      padding: 1rem 1.25rem;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 0.925rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      border: 1px solid transparent;
+    }
+
+    .action-btn.primary {
+      background: var(--primary);
+      color: #FFFFFF;
+    }
+
+    .action-btn.primary:hover {
+      background: var(--primary-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px var(--primary-glow);
+    }
+
+    .action-btn.whatsapp {
+      background: #128C7E;
+      color: #FFFFFF;
+    }
+
+    .action-btn.whatsapp:hover {
+      background: #075E54;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(18, 140, 126, 0.3);
+    }
+
+    .action-btn.outline {
+      background: rgba(255, 255, 255, 0.04);
+      color: #FFFFFF;
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .action-btn.outline:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .action-btn svg {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+    }
+
+    .btn-text-block {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
+
+    .btn-text-block .label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      opacity: 0.8;
+    }
+
+    .btn-text-block .val {
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    /* Footer */
+    .m-footer {
+      position: relative;
+      z-index: 10;
+      padding: 2rem 1.5rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      background: rgba(12, 14, 18, 0.95);
+      text-align: center;
+      font-size: 0.825rem;
+      color: var(--text-subtle);
+    }
+
+    .m-footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .group-companies {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.25rem;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .group-companies span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .group-companies span::after {
+      content: '•';
+      margin-left: 1.25rem;
+      color: rgba(255, 255, 255, 0.15);
+    }
+
+    .group-companies span:last-child::after {
+      content: '';
+    }
+
+    /* Floating WhatsApp Button */
+    .wa-floating {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background-color: #25D366;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFFFFF;
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+      z-index: 999;
+      text-decoration: none;
+      transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease;
+    }
+
+    .wa-floating:hover {
+      transform: scale(1.1);
+      box-shadow: 0 12px 30px rgba(37, 211, 102, 0.6);
+    }
+
+    .wa-floating svg {
+      width: 32px;
+      height: 32px;
+      fill: currentColor;
+    }
+
+    @media (max-width: 640px) {
+      .m-header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .status-badge {
+        align-self: flex-start;
+      }
+      .action-grid {
+        grid-template-columns: 1fr;
+      }
+      .contact-card {
+        padding: 1.5rem;
+      }
+      .wa-floating {
+        bottom: 1.25rem;
+        right: 1.25rem;
+        width: 52px;
+        height: 52px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="glow-orb"></div>
+
+  <!-- Header -->
+  <header class="m-header">
+    <div class="m-header-inner">
+      <a href="/" class="brand-wrap">
+        <img src="assets/logo/Logo.png" alt="Sri Aathithya Infra Logo" class="brand-logo">
+        <div>
+          <div class="brand-name">Aathithya <span>Groups</span></div>
+          <div class="brand-subtitle">Sri Aathithya Infra Project Pvt Ltd</div>
+        </div>
+      </a>
+
+      <div class="status-badge">
+        <div class="pulse-dot"></div>
+        <span>Maintenance In Progress</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="m-main">
+    <div class="m-icon-badge">
+      <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+      </svg>
+    </div>
+
+    <span class="m-eyebrow">Scheduled System Upgrade</span>
+    <h1 class="m-title">We’re Upgrading to <span>Serve You Better</span></h1>
+    <p class="m-desc">
+      Our official website is temporarily undergoing scheduled maintenance and infrastructure updates. We apologize for the inconvenience and will be back online shortly.
+    </p>
+
+    <!-- Progress Indicator -->
+    <div class="progress-box">
+      <div class="progress-labels">
+        <span>System Maintenance</span>
+        <span>In Progress</span>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill"></div>
+      </div>
+    </div>
+
+    <!-- Contact & Business Continuity Card -->
+    <div class="contact-card">
+      <div class="contact-card-header">
+        <h3>Business & Field Operations Continue As Usual</h3>
+        <span class="notice-tag">Active</span>
+      </div>
+      <p>
+        Our contracting sites, heavy machinery fleets, aggregate quarries, and project management offices remain fully operational. For immediate project tenders, billing inquiries, or material supply, connect directly with our management:
+      </p>
+
+      <div class="action-grid">
+        <!-- Phone -->
+        <a href="tel:+919500777777" class="action-btn primary">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+          </svg>
+          <div class="btn-text-block">
+            <span class="label">Direct Hotline</span>
+            <span class="val">+91 95007 77777</span>
+          </div>
+        </a>
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/919500777777?text=Hello%20Sri%20Aathithya%20Infra,%20I%20have%20an%20inquiry." target="_blank" rel="noopener noreferrer" class="action-btn whatsapp">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.41a8.17 8.17 0 0 1 2.4 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.24-.74-.66-1.24-1.47-1.39-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43-.14-.01-.31-.01-.48-.01-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.45 1.03 2.62.13.17 1.78 2.71 4.3 3.8 2.53 1.09 2.53.73 2.98.69.46-.04 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.3z"/>
+          </svg>
+          <div class="btn-text-block">
+            <span class="label">Instant Chat</span>
+            <span class="val">WhatsApp Us</span>
+          </div>
+        </a>
+
+        <!-- Email -->
+        <a href="mailto:sriaathithyainfraprojectpvtltd@gmail.com" class="action-btn outline">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          <div class="btn-text-block">
+            <span class="label">Tenders & Office</span>
+            <span class="val">Send an Email</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="m-footer">
+    <div class="m-footer-inner">
+      <div class="group-companies">
+        <span>Sri Aathithya Infra Project Pvt Ltd</span>
+        <span>Sri Aathithya Blue Metals</span>
+        <span>Kannan Contractor</span>
+        <span>Aathithya Blue Metals</span>
+        <span>Sri Aathithya Sands</span>
+      </div>
+      <div>
+        Registered Office: Flat No. 620/61A4, Sathyanagar, Chettinaickenpatti, Dindigul, Tamil Nadu – 624004
+      </div>
+      <div>
+        GSTIN: 33ABNCS2699J1ZO &bull; &copy; 2026 Sri Aathithya Infra Project Private Limited. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp CTA -->
+  <a href="https://wa.me/919500777777?text=Hello%20Sri%20Aathithya%20Infra,%20I%20have%20an%20inquiry." class="wa-floating" target="_blank" rel="noopener noreferrer" aria-label="Chat with Sri Aathithya Infra on WhatsApp" title="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24">
+      <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.41a8.17 8.17 0 0 1 2.4 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.24-.74-.66-1.24-1.47-1.39-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43-.14-.01-.31-.01-.48-.01-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.45 1.03 2.62.13.17 1.78 2.71 4.3 3.8 2.53 1.09 2.53.73 2.98.69.46-.04 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.3z"/>
+    </svg>
+  </a>
+
+</body>
+</html>
